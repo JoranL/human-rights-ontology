@@ -17,7 +17,7 @@ Here you can read more about the benefits of ontologies: [Explaining Ontologies 
 Alongside the ontology, there will be a manual for how to use it for developing data models for concrete applications. 
 
 ## Collaboration
-The project is done in collaboration with HURIDOCS, an NGO that helps human rights groups gather, organise and use information. My contact person there is [Kristin Antin](https://www.su.se/english/profiles/mhenk-1.182179). My supervisor at Stockholm University is [Martin Henkel](https://www.su.se/english/profiles/mhenk-1.182179).
+The project is done in collaboration with HURIDOCS, an NGO that helps human rights groups gather, organise and use information. My contact person there is [Kristin Antin](https://huridocs.org/about/staff/), knowledge collaboration lead. My supervisor at Stockholm University is Associate Professor [Martin Henkel](https://www.su.se/english/profiles/mhenk-1.182179).
 
 ## Participate!
 During the project, I will ask human rights workers to give inputs to the requirements of the Human Rights Ontology. When the ontology is finished, there will be an opportunity for some of the participants to have tailored data models developed for them, as a form of demonstration of the ontology. If you are interested in participating, please don’t hesitate to **contact me**!
