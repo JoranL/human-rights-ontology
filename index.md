@@ -12,7 +12,7 @@ The Human Rights Ontology will be:
 
 In other words, it should be useful for most human rights groups. Ontologies are valuable for database designing because they reduce the need of reinventing the wheel. They provide a map of what lies ahead, and patterns that can be reused. 
 
-Here you can read more about the benefits of ontologies: [Explaining Ontologies to Your Boss](https://ontology-explained.com/2020/explain-boss/)
+Here you can read more about the benefits of ontologies: [Explaining Ontologies to Your Boss](https://ontology-explained.com/2020/explain-boss/).
 
 Alongside the ontology, there will be a manual for how to use it for developing data models for concrete applications. 
 
@@ -26,7 +26,7 @@ During the project, I will ask human rights workers to give inputs to the requir
 I am studying the [master’s programme in Strategic Information Systems Management](https://www.su.se/english/search-courses-and-programmes/sslio-1.413332) at the Department of Computer and Systems Sciences (DSV) at Stockholm University. Previously I have mostly been working with communications, international cooperation and human rights monitoring, for among others UN Human Rights, the Swedish Fellowship of Reconciliation (SweFOR) and the Colombia Project of Peace Brigades International (PBI). 
 
 ### Contact
-Jöran Lindeberg
-joran.lindeberg@pm.me [public key](https://web.tresorit.com/l/u0Irh#VJwFDNBK2IY1Gp-F6yH-mQ)
-+46 70 6016136 (Signal, Telegram, WhatsApp)
+Jöran Lindeberg  
+joran.lindeberg@pm.me ([public key](https://web.tresorit.com/l/u0Irh#VJwFDNBK2IY1Gp-F6yH-mQ))  
++46 70 6016136 (Signal, Telegram, WhatsApp)  
 [LinkedIn](https://se.linkedin.com/in/joran-lindeberg)
