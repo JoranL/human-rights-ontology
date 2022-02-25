@@ -23,7 +23,7 @@ The project is done in collaboration with HURIDOCS, an NGO that helps human righ
 During the project, I will ask human rights workers to give inputs to the requirements of the Human Rights Ontology. When the ontology is finished, there will be an opportunity for some of the participants to have tailored data models developed for them, as a form of demonstration of the ontology. If you are interested in participating, please don’t hesitate to **contact me**!
 
 ## About me
-I am studying the [master’s programme in Strategic Information Systems Management](https://www.su.se/english/search-courses-and-programmes/sslio-1.413332) at the Department of Computer and Systems Sciences (DSV) at Stockholm University. Previously I have mostly been working with communications, international cooperation and human rights monitoring, for among others UN Human Rights, the Swedish Fellowship of Reconciliation (SweFOR) and the Colombia Project of Peace Brigades International (PBI). 
+I am studying the [master’s programme in Strategic Information Systems Management](https://www.su.se/english/search-courses-and-programmes/sslio-1.413332) at the Department of Computer and Systems Sciences (DSV) at Stockholm University. Previously I have mostly worked with communications, international cooperation and human rights monitoring, for among others UN Human Rights, the Swedish Fellowship of Reconciliation (SweFOR) and the Colombia Project of Peace Brigades International (PBI). 
 
 ### Contact
 Jöran Lindeberg  
