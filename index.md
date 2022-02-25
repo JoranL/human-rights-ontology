@@ -27,6 +27,6 @@ I am studying the [master’s programme in Strategic Information Systems Managem
 
 ### Contact
 Jöran Lindeberg
-joran.lindeberg@pm.me ([public key](https://web.tresorit.com/l/u0Irh#VJwFDNBK2IY1Gp-F6yH-mQ)
+joran.lindeberg@pm.me ([public key](https://web.tresorit.com/l/u0Irh#VJwFDNBK2IY1Gp-F6yH-mQ))
 +46 70 6016136 (Signal, Telegram, WhatsApp)
 [LinkedIn](https://se.linkedin.com/in/joran-lindeberg)
