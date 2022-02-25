@@ -6,11 +6,11 @@ The goal of the project is to design an ontology that will be a tool for human r
 
 The Human Rights Ontology will be: 
 
-- Comprehensive. It will cover most aspects of human rights violations documentation
-- Flexible. It will be built on different modules that can be put together so that they fit the needs of different organisations. 
-- Open and editable.
+- **Comprehensive**. It will cover most aspects of human rights violations documentation
+- **Flexible**. It will be built on different modules that can be put together so that they fit the needs of different organisations. 
+- **Open** and **editable**.
 
-In other words, it should be useful for most human rights groups. Ontologies are valuable for database designing because they reduce the need of reinventing the wheel. They provide a map of what lies ahead, and patterns that can be reused. 
+In other words, it should be useful for most human rights groups. Ontologies are valuable for database designing because they reduce the need of reinventing the wheel. They provide a map of what lies ahead, and also patterns that can be reused. 
 
 Here you can read more about the benefits of ontologies: [Explaining Ontologies to Your Boss](https://ontology-explained.com/2020/explain-boss/).
 
