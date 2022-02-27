@@ -1,6 +1,6 @@
 ## Human Rights Ontology
 
-This is my master thesis project at the Department of Computer and Systems Sciences (DSV) at Stockholm University.
+This is my master thesis project at the Department of Computer and Systems Sciences (DSV) at Stockholm University. It will be finished in June 2022.
 
 The goal of the project is to design an ontology that will be a tool for human rights groups that are building databases for documenting human rights violations. In short, an ontology is a shared data model that can be reused and adapted for many different systems and applications. Ontologies are valuable for database designing because they reduce the need of reinventing the wheel. They provide a map of what lies ahead, and design patterns that can be reused. 
 
