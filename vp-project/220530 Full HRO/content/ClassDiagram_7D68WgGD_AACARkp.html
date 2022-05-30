@@ -1,0 +1,462 @@
+<html>
+<head>
+	<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="report.css" type="text/css"/>
+	<title>Class Diagram - FULL 11. Detention Centres</title>
+	<script type="text/javascript" src="report.js"></script>
+	<script type="text/javascript" src="link_popup.js"></script>
+	<script type="text/javascript" src="tooltip.js"></script>
+</head>
+<body style="margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;" onload="initPage();initDiagram();initGridDiagram();">
+	<div style="position:absolute; z-index:2; visibility:hidden;border-top: 2px #FF0000 solid;" id="spotlight_top">
+	</div>
+	<div style="position:absolute; z-index:2; visibility:hidden;border-top: 2px #FF0000 solid;" id="spotlight_bottom">
+	</div>
+	<div style="position:absolute; z-index:2; visibility:hidden;border-left: 2px #FF0000 solid;" id="spotlight_left">
+	</div>
+	<div style="position:absolute; z-index:2; visibility:hidden;border-left: 2px #FF0000 solid;" id="spotlight_right">
+	</div>
+	<canvas width="100" style="position:absolute; z-index:2; visibility:hidden" id="spotlight_c" height="100">
+	</canvas>
+	<div style="position:absolute; width:100px; height:100px; z-index:1; visibility:hidden" id="spotLightResourcesTop">
+		<table border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+<a href="#top"><img style="border:none" src="../images/icons/BackToTop.gif" alt="Back to top"/></a>				</td>
+				<td>
+<a href="javascript:clearSpotLightFromOpenSpecButton();"><img style="border:none" src="../images/icons/OpenSpecification.gif" alt="Open specification"/></a>				</td>
+			</tr>
+		</table>
+	</div>
+	<div style="position:absolute; width:100px; height:100px; z-index:1; visibility:hidden" id="spotLightResourcesRight">
+		<table border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+<a href="#top"><img style="border:none" src="../images/icons/BackToTop.gif" alt="Back to top"/></a>				</td>
+			</tr>
+			<tr>
+				<td>
+<a href="javascript:clearSpotLightFromOpenSpecButton();"><img style="border:none" src="../images/icons/OpenSpecification.gif" alt="Open specification"/></a>				</td>
+			</tr>
+		</table>
+	</div>
+	<div style="position:absolute;z-index:4;visibility:hidden" id="linkPopupMenuLayer">
+		<table border="0" width="100%" style="border-style:solid; border-width:1px; border-color:#000000; background:#FFFFFF; width:250px" id="linkPopupMenuTable">
+		</table>
+	</div>
+	<div style="position:absolute; z-index:1; visibility:hidden; " id="referenceIconLayer">
+		<table border="0" cellpadding="3" cellspacing="0" style="font-size:1;">
+			<tr>
+				<td>
+					<img src="../images/icons/Ref.gif" style="border:none" onclick="movePopupPositionToReferenceIconPosition();resetPopupForReference();switchPopupShowHideStatus();" />				</td>
+			</tr>
+		</table>
+	</div>
+	<div style="position:absolute; z-index:1; visibility:hidden; " id="subdiagramIconLayer">
+		<table border="0" cellpadding="3" cellspacing="0" style="font-size:1;">
+			<tr>
+				<td>
+					<img src="../images/icons/Subdiagram.gif" style="border:none" onclick="movePopupPositionToSubdiagramIconPosition();resetPopupForSubdiagram();switchPopupShowHideStatus();" />				</td>
+			</tr>
+		</table>
+	</div>
+	<div style="position:absolute; z-index:1; visibility:hidden; " id="transitorIconLayer">
+		<table border="0" cellpadding="3" cellspacing="0" style="font-size:1;">
+			<tr>
+				<td>
+					<img src="../images/icons/Transitor.gif" style="border:none" onclick="movePopupPositionToTransitorIconPosition();resetPopupForTransitor();switchPopupShowHideStatus();" />				</td>
+			</tr>
+		</table>
+	</div>
+	<div style="position:absolute; z-index:1; visibility:hidden; " id="documentationIconLayer">
+		<table border="0" cellpadding="3" cellspacing="0" style="font-size:1;">
+			<tr>
+				<td>
+					<img src="../images/icons/Documentation.png" style="border:none" />				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="HeaderText">
+		Human Rights Ontology	</div>
+	<table border="0" cellpadding="0" width="100%" cellspacing="0">
+		<tr>
+			<td class="HeaderLine1">
+			</td>
+		</tr>
+		<tr>
+			<td class="HeaderLine2">
+			</td>
+		</tr>
+		<tr>
+			<td class="HeaderLine3">
+			</td>
+		</tr>
+	</table>
+	<div style="position:absolute; z-index:21; visibility:hidden" id="referencedBys">
+		<table border="0" width="100%" style="border-style:solid; border-width:1px; border-color:#000000; background:#FFFFFF; width:250px" id="referencedBysTable">
+		</table>
+	</div>
+	<div style="position:absolute; z-index:21; visibility:hidden" id="vplink">
+		<table border="1" cellpadding="0" cellspacing="0" bordercolor="#A9BFD3">
+			<tr>
+				<td>
+					<table border="0" cellpadding="0" width="100%" cellspacing="0">
+						<tr style="background:#DDDDDD">
+							<td style="font-size: 12px;" align="left">
+								<select onchange="vpLinkToggleName()" id="vplink-linkType">
+	<option value="Project Link">Project Link</option>
+	<option value="Page URL">Page URL</option>
+</select>
+							</td>
+							<td style="font-size: 12px;" align="right">
+								<input onclick="javascript: vpLinkToggleName()" id="vplink-checkbox" type="checkbox" />
+								<label for="vplink-checkbox">with Name</label>							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<textarea id="vplink-text" style="width: 348px; height: 60px; border-color: #7EADD9; outline: none;"></textarea>				</td>
+			</tr>
+		</table>
+	</div>
+	<p class="PageTitle">
+		<span id="PageTitleText">
+			Class Diagram - FULL 11. Detention Centres		</span>
+<a onclick="javascript: showVpLink('Human Rights Ontology55_FULL.vpp://diagram/7D68WgGD.AACARkp', 'FULL 11. Detention Centres\nHuman Rights Ontology55_FULL.vpp://diagram/7D68WgGD.AACARkp', 'FULL 11. Detention Centres', this); return false;" style="padding-left: 16px; font-size: 12px" href="#"><img src="../images/icons/link.png" border="0"> link</a>	</p>
+	<div style="position: relative; padding-bottom: 20px;">
+		<table border="0" cellpadding="0" width="100%" cellspacing="0" style="position: absolute; top: 0; left: 0; z-index: 20;" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon(),hideLinkPopup(),hideReferencedBys();">
+			<tr>
+				<td>
+<span class="TableContent">Jump to:</span>					<select id="SelectShape" class="TableContent" onChange="scrollWin('diagram', this.value);hideLinkPopup();showSpotLight('diagram', this.value)">
+<option value="">Please select a model element</option>
+<option value="shape|313.0|325.0|118.0|40.0|Class_f76sTAGD_AACAT2P.html|Class_f76sTAGD_AACAT2P.html|Mc.N7QGD.AACASKQ" id="optionMc.N7QGD.AACASKQ">Intentional Event : Class</option>
+<option value="shape|526.0|168.0|91.0|40.0|Class_4L917QGD_AACASHx.html|Class_4L917QGD_AACASHx.html|IL917QGD.AACASHv" id="optionIL917QGD.AACASHv">De Jure Detainment : Class</option>
+<option value="shape|344.0|168.0|91.0|40.0|Class_AmV17QGD_AACASHV.html|Class_AmV17QGD_AACASHV.html|AmV17QGD.AACASHU" id="optionAmV17QGD.AACASHU">De Facto Detainment : Class</option>
+<option value="shape|451.0|39.0|84.0|40.0|Class_tri57QGD_AACAR9t.html|Class_tri57QGD_AACAR9t.html|tri57QGD.AACAR9s" id="optiontri57QGD.AACAR9s">Detainment : Class</option>
+<option value="shape|502.0|325.0|139.0|40.0|Class_5m351gGD_AACAS91.html|Class_5m351gGD_AACAS91.html|BuGHJQGD.AACAXdE" id="optionBuGHJQGD.AACAXdE">Official Legal Record : Class</option>
+<option value="shape|207.0|421.0|137.0|86.0|Class_bh6bJQGD_AACAXL6.html|Class_bh6bJQGD_AACAXL6.html|zh6bJQGD.AACAXL4" id="optionzh6bJQGD.AACAXL4">Detained : Class</option>
+<option value="shape|1054.0|413.0|95.0|40.0|Class_e2fJmQGD_AACAS0S.html|Class_e2fJmQGD_AACAS0S.html|G2fJmQGD.AACAS0Q" id="optionG2fJmQGD.AACAS0Q">Detainment Conditions : Class</option>
+<option value="shape|85.0|710.0|122.0|40.0|Class_jUnaWgGD_AACARzB.html|Class_jUnaWgGD_AACARzB.html|jUnaWgGD.AACARzA" id="optionjUnaWgGD.AACARzA">Detained person : Class</option>
+<option value="shape|230.0|710.0|137.0|40.0|Class_GXPqWgGD_AACARwp.html|Class_GXPqWgGD_AACARwp.html|GXPqWgGD.AACARwo" id="optionGXPqWgGD.AACARwo">Detained Group : Class</option>
+<option value="shape|322.0|574.0|101.0|40.0|Class_6FWyWgGD_AACARsW.html|Class_6FWyWgGD_AACARsW.html|nC4KWgGD.AACARt9" id="optionnC4KWgGD.AACARt9">Circumstantial Group : Class</option>
+<option value="shape|2.0|574.0|139.0|40.0|Class_iUdu0AGD_AACAU3n.html|Class_iUdu0AGD_AACAU3n.html|YxhiWgGD.AACARrs" id="optionYxhiWgGD.AACARrs">Natural Person : Class</option>
+<option value="shape|676.0|421.0|117.0|40.0|Class__4nAnAGD_AACARMA.html|Class__4nAnAGD_AACARMA.html|th_CWgGD.AACARpK" id="optionth_CWgGD.AACARpK">Detention Centre : Class</option>
+<option value="shape|728.0|2.0|145.0|139.0|Class_MJoUzAGD_AACAU6N.html|Class_MJoUzAGD_AACAU6N.html|tCt8WgGD.AACARl5" id="optiontCt8WgGD.AACARl5">Place : Class</option>
+<option value="shape|745.0|220.0|128.0|40.0|Class_a7YEzAGD_AACAU4h.html|Class_a7YEzAGD_AACAU4h.html|FCt8WgGD.AACARl2" id="optionFCt8WgGD.AACARl2">Site : Class</option>
+<option value="shape|1048.0|62.0|95.0|40.0|Class__7rFAAGD_AACAR7p.html|Class__7rFAAGD_AACAR7p.html|Hz68WgGD.AACARk3" id="optionHz68WgGD.AACARk3">UFO-B: Situation : Class</option>
+</select>				</td>
+			</tr>
+		</table>
+		<table border="0" cellpadding="0" width="100%" cellspacing="0" style="position: relative; top: 24;">
+			<tr>
+				<td>
+					<img id="diagram" src="../images/FULL_11_Detention_Centres.png" usemap="#diagram_map" class="Image" width="1153" height="754"/>
+					<map name="diagram_map">
+<area imageId="diagram" coords="873.0, 75.0, 873.0, 89.0, 1048.0, 89.0, 1048.0, 75.0" coords2="873.0, 75.0, 873.0, 89.0, 1048.0, 89.0, 1048.0, 75.0" shape="poly" alt="within a:Association" id="areadiagram_map_git8WgGD.AACARmE_default" href="Association_l5IuzAGD_AACAU7m.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="754.0, 260.0, 754.0, 421.0, 768.0, 421.0, 768.0, 260.0" coords2="754.0, 260.0, 754.0, 421.0, 768.0, 421.0, 768.0, 260.0" shape="poly" alt=":Generalization" id="areadiagram_map_bh_CWgGD.AACARpM_default" href="Generalization_uSfAnAGD_AACARMI.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="353.0, 614.0, 353.0, 710.0, 367.0, 710.0, 367.0, 614.0" coords2="353.0, 614.0, 353.0, 710.0, 367.0, 710.0, 367.0, 614.0" shape="poly" alt=":Generalization" id="areadiagram_map_voIaWgGD.AACARw5_default" href="Generalization_NoIaWgGD_AACARw4.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="117.0, 614.0, 117.0, 710.0, 131.0, 710.0, 131.0, 614.0" coords2="117.0, 614.0, 117.0, 710.0, 131.0, 710.0, 131.0, 614.0" shape="poly" alt=":Generalization" id="areadiagram_map_.T3aWgGD.AACARzL_default" href="Generalization_fj3aWgGD_AACARzK.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="758.0, 141.0, 758.0, 220.0, 772.0, 220.0, 772.0, 141.0" coords2="758.0, 141.0, 758.0, 220.0, 772.0, 220.0, 772.0, 141.0" shape="poly" alt=":Generalization" id="areadiagram_map_A6gm5gGD.AACARt5_default" href="Generalization_1gO65gGD_AACARpF.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="1062.0, 102.0, 1062.0, 413.0, 1076.0, 413.0, 1076.0, 102.0" coords2="1062.0, 102.0, 1062.0, 413.0, 1076.0, 413.0, 1076.0, 102.0" shape="poly" alt=":Generalization" id="areadiagram_map_iMRpmQGD.AACAS2G_default" href="Generalization_oMRpmQGD_AACAS2F.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="793.0, 434.0, 793.0, 448.0, 1054.0, 448.0, 1054.0, 434.0" coords2="793.0, 434.0, 793.0, 448.0, 1054.0, 448.0, 1054.0, 434.0" shape="poly" alt="within a:Association" id="areadiagram_map_bw5pmQGD.AACAS2W_default" href="Association__w5pmQGD_AACAS2R.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="344.0, 425.0, 344.0, 439.0, 676.0, 439.0, 676.0, 425.0" coords2="344.0, 425.0, 344.0, 439.0, 676.0, 439.0, 676.0, 425.0" shape="poly" alt="detained in:Association" id="areadiagram_map_CaaKWgGD.AACARuV_default" href="Association_XqaKWgGD_AACARuQ.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="251.0, 507.0, 251.0, 667.0, 248.0, 667.0, 248.0, 681.0, 251.0, 681.0, 251.0, 684.0, 265.0, 684.0, 265.0, 681.0, 287.0, 681.0, 287.0, 710.0, 301.0, 710.0, 301.0, 681.0, 304.0, 681.0, 304.0, 667.0, 301.0, 667.0, 301.0, 664.0, 287.0, 664.0, 287.0, 667.0, 265.0, 667.0, 265.0, 507.0" coords2="251.0, 507.0, 251.0, 667.0, 248.0, 667.0, 248.0, 681.0, 251.0, 681.0, 251.0, 684.0, 265.0, 684.0, 265.0, 681.0, 287.0, 681.0, 287.0, 710.0, 301.0, 710.0, 301.0, 681.0, 304.0, 681.0, 304.0, 667.0, 301.0, 667.0, 301.0, 664.0, 287.0, 664.0, 287.0, 667.0, 265.0, 667.0, 265.0, 507.0" shape="poly" alt=":Generalization" id="areadiagram_map_I9X7JQGD.AACAXbm_default" href="Generalization_1dX7JQGD_AACAXbl.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="251.0, 507.0, 251.0, 667.0, 180.0, 667.0, 180.0, 664.0, 166.0, 664.0, 166.0, 667.0, 163.0, 667.0, 163.0, 681.0, 166.0, 681.0, 166.0, 710.0, 180.0, 710.0, 180.0, 681.0, 251.0, 681.0, 251.0, 684.0, 265.0, 684.0, 265.0, 681.0, 268.0, 681.0, 268.0, 667.0, 265.0, 667.0, 265.0, 507.0" coords2="251.0, 507.0, 251.0, 667.0, 180.0, 667.0, 180.0, 664.0, 166.0, 664.0, 166.0, 667.0, 163.0, 667.0, 163.0, 681.0, 166.0, 681.0, 166.0, 710.0, 180.0, 710.0, 180.0, 681.0, 251.0, 681.0, 251.0, 684.0, 265.0, 684.0, 265.0, 681.0, 268.0, 681.0, 268.0, 667.0, 265.0, 667.0, 265.0, 507.0" shape="poly" alt=":Generalization" id="areadiagram_map_DnP7JQGD.AACAXbq_default" href="Generalization_2nP7JQGD_AACAXbp.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="592.0, 208.0, 592.0, 325.0, 606.0, 325.0, 606.0, 208.0" coords2="592.0, 208.0, 592.0, 325.0, 606.0, 325.0, 606.0, 208.0" shape="poly" alt=":Association" id="areadiagram_map_7c2HJQGD.AACAXdd_default" href="Association_Oc2HJQGD_AACAXdY.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="543.0, 208.0, 543.0, 325.0, 557.0, 325.0, 557.0, 208.0" coords2="543.0, 208.0, 543.0, 325.0, 557.0, 325.0, 557.0, 208.0" shape="poly" alt=":Association" id="areadiagram_map_cHBHJQGD.AACAXdr_default" href="Association_N7BHJQGD_AACAXdm.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="252.0, 49.0, 252.0, 52.0, 249.0, 52.0, 249.0, 66.0, 252.0, 66.0, 252.0, 421.0, 266.0, 421.0, 266.0, 66.0, 451.0, 66.0, 451.0, 52.0, 266.0, 52.0, 266.0, 49.0" coords2="252.0, 49.0, 252.0, 52.0, 249.0, 52.0, 249.0, 66.0, 252.0, 66.0, 252.0, 421.0, 266.0, 421.0, 266.0, 66.0, 451.0, 66.0, 451.0, 52.0, 266.0, 52.0, 266.0, 49.0" shape="poly" alt=":Association" id="areadiagram_map_4U.57QGD.AACAR.D_default" href="Association_tk_57QGD_AACAR9_.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="688.0, 49.0, 688.0, 52.0, 535.0, 52.0, 535.0, 66.0, 688.0, 66.0, 688.0, 421.0, 702.0, 421.0, 702.0, 66.0, 705.0, 66.0, 705.0, 52.0, 702.0, 52.0, 702.0, 49.0" coords2="688.0, 49.0, 688.0, 52.0, 535.0, 52.0, 535.0, 66.0, 688.0, 66.0, 688.0, 421.0, 702.0, 421.0, 702.0, 66.0, 705.0, 66.0, 705.0, 52.0, 702.0, 52.0, 702.0, 49.0" shape="poly" alt=":Association" id="areadiagram_map_S3.57QGD.AACAR.L_default" href="Association_Q3_57QGD_AACAR_G.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="480.0, 79.0, 480.0, 123.0, 379.0, 123.0, 379.0, 120.0, 365.0, 120.0, 365.0, 123.0, 362.0, 123.0, 362.0, 137.0, 365.0, 137.0, 365.0, 168.0, 379.0, 168.0, 379.0, 137.0, 480.0, 137.0, 480.0, 140.0, 494.0, 140.0, 494.0, 137.0, 497.0, 137.0, 497.0, 123.0, 494.0, 123.0, 494.0, 79.0" coords2="480.0, 79.0, 480.0, 123.0, 379.0, 123.0, 379.0, 120.0, 365.0, 120.0, 365.0, 123.0, 362.0, 123.0, 362.0, 137.0, 365.0, 137.0, 365.0, 168.0, 379.0, 168.0, 379.0, 137.0, 480.0, 137.0, 480.0, 140.0, 494.0, 140.0, 494.0, 137.0, 497.0, 137.0, 497.0, 123.0, 494.0, 123.0, 494.0, 79.0" shape="poly" alt="{disjoint, complete}:Generalization" id="areadiagram_map_pcz17QGD.AACASH._default" href="Generalization_Scz17QGD_AACASH9.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="480.0, 79.0, 480.0, 123.0, 477.0, 123.0, 477.0, 137.0, 480.0, 137.0, 480.0, 140.0, 494.0, 140.0, 494.0, 137.0, 576.0, 137.0, 576.0, 168.0, 590.0, 168.0, 590.0, 137.0, 593.0, 137.0, 593.0, 123.0, 590.0, 123.0, 590.0, 120.0, 576.0, 120.0, 576.0, 123.0, 494.0, 123.0, 494.0, 79.0" coords2="480.0, 79.0, 480.0, 123.0, 477.0, 123.0, 477.0, 137.0, 480.0, 137.0, 480.0, 140.0, 494.0, 140.0, 494.0, 137.0, 576.0, 137.0, 576.0, 168.0, 590.0, 168.0, 590.0, 137.0, 593.0, 137.0, 593.0, 123.0, 590.0, 123.0, 590.0, 120.0, 576.0, 120.0, 576.0, 123.0, 494.0, 123.0, 494.0, 79.0" shape="poly" alt=":Generalization" id="areadiagram_map_h_z17QGD.AACASIC_default" href="Generalization_i_z17QGD_AACASIB.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="353.0, 208.0, 353.0, 325.0, 367.0, 325.0, 367.0, 208.0" coords2="353.0, 208.0, 353.0, 325.0, 367.0, 325.0, 367.0, 208.0" shape="poly" alt=":Association" id="areadiagram_map_tnZN7QGD.AACASKl_default" href="Association_qnZN7QGD_AACASKg.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="387.0, 208.0, 387.0, 325.0, 401.0, 325.0, 401.0, 208.0" coords2="387.0, 208.0, 387.0, 325.0, 401.0, 325.0, 401.0, 208.0" shape="poly" alt=":Association" id="areadiagram_map_lmbN7QGD.AACASLm_default" href="Association_YmbN7QGD_AACASLh.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="313, 325, 431, 365" coords2="313, 325, 431, 365" shape="rect" alt="Intentional Event:Class" id="areadiagram_map_Mc.N7QGD.AACASKQ_default" href="Class_f76sTAGD_AACAT2P.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="526, 168, 617, 208" coords2="526, 168, 617, 208" shape="rect" alt="De Jure Detainment:Class" id="areadiagram_map_IL917QGD.AACASHv_default" href="Class_4L917QGD_AACASHx.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="344, 168, 435, 208" coords2="344, 168, 435, 208" shape="rect" alt="De Facto Detainment:Class" id="areadiagram_map_AmV17QGD.AACASHU_default" href="Class_AmV17QGD_AACASHV.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="451, 39, 535, 79" coords2="451, 39, 535, 79" shape="rect" alt="Detainment:Class" id="areadiagram_map_tri57QGD.AACAR9s_default" href="Class_tri57QGD_AACAR9t.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="502, 325, 641, 365" coords2="502, 325, 641, 365" shape="rect" alt="Official Legal Record:Class" id="areadiagram_map_BuGHJQGD.AACAXdE_default" href="Class_5m351gGD_AACAS91.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="207, 421, 344, 507" coords2="207, 421, 344, 507" shape="rect" alt="Detained:Class" id="areadiagram_map_zh6bJQGD.AACAXL4_default" href="Class_bh6bJQGD_AACAXL6.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="1054, 413, 1149, 453" coords2="1054, 413, 1149, 453" shape="rect" alt="Detainment Conditions:Class" id="areadiagram_map_G2fJmQGD.AACAS0Q_default" href="Class_e2fJmQGD_AACAS0S.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="85, 710, 207, 750" coords2="85, 710, 207, 750" shape="rect" alt="Detained person:Class" id="areadiagram_map_jUnaWgGD.AACARzA_default" href="Class_jUnaWgGD_AACARzB.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="230, 710, 367, 750" coords2="230, 710, 367, 750" shape="rect" alt="Detained Group:Class" id="areadiagram_map_GXPqWgGD.AACARwo_default" href="Class_GXPqWgGD_AACARwp.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="322, 574, 423, 614" coords2="322, 574, 423, 614" shape="rect" alt="Circumstantial Group:Class" id="areadiagram_map_nC4KWgGD.AACARt9_default" href="Class_6FWyWgGD_AACARsW.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="2, 574, 141, 614" coords2="2, 574, 141, 614" shape="rect" alt="Natural Person:Class" id="areadiagram_map_YxhiWgGD.AACARrs_default" href="Class_iUdu0AGD_AACAU3n.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="676, 421, 793, 461" coords2="676, 421, 793, 461" shape="rect" alt="Detention Centre:Class" id="areadiagram_map_th_CWgGD.AACARpK_default" href="Class__4nAnAGD_AACARMA.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="728, 2, 873, 141" coords2="728, 2, 873, 141" shape="rect" alt="Place:Class" id="areadiagram_map_tCt8WgGD.AACARl5_default" href="Class_MJoUzAGD_AACAU6N.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="745, 220, 873, 260" coords2="745, 220, 873, 260" shape="rect" alt="Site:Class" id="areadiagram_map_FCt8WgGD.AACARl2_default" href="Class_a7YEzAGD_AACAU4h.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="1048, 62, 1143, 102" coords2="1048, 62, 1143, 102" shape="rect" alt="UFO-B: Situation:Class" id="areadiagram_map_Hz68WgGD.AACARk3_default" href="Class__7rFAAGD_AACAR7p.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+</map>
+				</td>
+			</tr>
+		</table>
+		<p>
+		</p>
+	</div>
+	<table border="0" cellpadding="0" width="100%" cellspacing="0">
+		<tr>
+			<td class="Category">
+				Model Elements			</td>
+		</tr>
+		<tr>
+			<td style="height: 5px">
+			</td>
+		</tr>
+	</table>
+	<table border="0" cellpadding="0" width="100%" cellspacing="0">
+		<tr>
+			<td colSpan="4" class="TableHeaderLine">
+			</td>
+		</tr>
+		<tr>
+			<td colSpan="4" class="TableHeaderLine1">
+			</td>
+		</tr>
+		<tr class="TableHeader">
+			<td class="TableCellSpaceHolder10Px">
+			</td>
+			<td width="30%">
+<span class="TableHeaderText">Name</span>			</td>
+			<td class="TableCellSpaceHolder20Px">
+			</td>
+			<td>
+<span class="TableHeaderText">Description</span>			</td>
+		</tr>
+		<tr>
+			<td colSpan="4" class="TableHeaderLine2">
+			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_f76sTAGD_AACAT2P.html" class="ItemLink">Intentional Event : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_4L917QGD_AACASHx.html" class="ItemLink">De Jure Detainment : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_AmV17QGD_AACASHV.html" class="ItemLink">De Facto Detainment : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_tri57QGD_AACAR9t.html" class="ItemLink">Detainment : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_5m351gGD_AACAS91.html" class="ItemLink">Official Legal Record : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_bh6bJQGD_AACAXL6.html" class="ItemLink">Detained : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_e2fJmQGD_AACAS0S.html" class="ItemLink">Detainment Conditions : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_jUnaWgGD_AACARzB.html" class="ItemLink">Detained person : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_GXPqWgGD_AACARwp.html" class="ItemLink">Detained Group : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_6FWyWgGD_AACARsW.html" class="ItemLink">Circumstantial Group : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_iUdu0AGD_AACAU3n.html" class="ItemLink">Natural Person : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class__4nAnAGD_AACARMA.html" class="ItemLink">Detention Centre : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_MJoUzAGD_AACAU6N.html" class="ItemLink">Place : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_a7YEzAGD_AACAU4h.html" class="ItemLink">Site : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class__7rFAAGD_AACAR7p.html" class="ItemLink">UFO-B: Situation : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+	</table>
+	<table border="0" cellpadding="0" width="100%" cellspacing="0">
+		<tr>
+			<td class="TableCellSpaceHolder1PxTall">
+			</td>
+		</tr>
+		<tr>
+			<td class="TableFooter">
+			</td>
+		</tr>
+	</table>
+	<div style="height: 20px">
+	</div>
+	<table border="0" cellpadding="0" width="100%" cellspacing="0">
+		<tr>
+			<td class="FooterLine">
+			</td>
+		</tr>
+	</table>
+	<div class="HeaderText">
+		Human Rights Ontology	</div>
+</body>
+</html>
