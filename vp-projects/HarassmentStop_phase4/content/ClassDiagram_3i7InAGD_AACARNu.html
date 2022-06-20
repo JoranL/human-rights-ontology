@@ -1,0 +1,327 @@
+<html>
+<head>
+	<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="report.css" type="text/css"/>
+	<title>Class Diagram - SIMPLE 2 Actions and Consequences (3-5)</title>
+	<script type="text/javascript" src="report.js"></script>
+	<script type="text/javascript" src="link_popup.js"></script>
+	<script type="text/javascript" src="tooltip.js"></script>
+</head>
+<body style="margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;" onload="initPage();initDiagram();initGridDiagram();">
+	<div style="position:absolute; z-index:2; visibility:hidden;border-top: 2px #FF0000 solid;" id="spotlight_top">
+	</div>
+	<div style="position:absolute; z-index:2; visibility:hidden;border-top: 2px #FF0000 solid;" id="spotlight_bottom">
+	</div>
+	<div style="position:absolute; z-index:2; visibility:hidden;border-left: 2px #FF0000 solid;" id="spotlight_left">
+	</div>
+	<div style="position:absolute; z-index:2; visibility:hidden;border-left: 2px #FF0000 solid;" id="spotlight_right">
+	</div>
+	<canvas width="100" style="position:absolute; z-index:2; visibility:hidden" id="spotlight_c" height="100">
+	</canvas>
+	<div style="position:absolute; width:100px; height:100px; z-index:1; visibility:hidden" id="spotLightResourcesTop">
+		<table border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+<a href="#top"><img style="border:none" src="../images/icons/BackToTop.gif" alt="Back to top"/></a>				</td>
+				<td>
+<a href="javascript:clearSpotLightFromOpenSpecButton();"><img style="border:none" src="../images/icons/OpenSpecification.gif" alt="Open specification"/></a>				</td>
+			</tr>
+		</table>
+	</div>
+	<div style="position:absolute; width:100px; height:100px; z-index:1; visibility:hidden" id="spotLightResourcesRight">
+		<table border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+<a href="#top"><img style="border:none" src="../images/icons/BackToTop.gif" alt="Back to top"/></a>				</td>
+			</tr>
+			<tr>
+				<td>
+<a href="javascript:clearSpotLightFromOpenSpecButton();"><img style="border:none" src="../images/icons/OpenSpecification.gif" alt="Open specification"/></a>				</td>
+			</tr>
+		</table>
+	</div>
+	<div style="position:absolute;z-index:4;visibility:hidden" id="linkPopupMenuLayer">
+		<table border="0" width="100%" style="border-style:solid; border-width:1px; border-color:#000000; background:#FFFFFF; width:250px" id="linkPopupMenuTable">
+		</table>
+	</div>
+	<div style="position:absolute; z-index:1; visibility:hidden; " id="referenceIconLayer">
+		<table border="0" cellpadding="3" cellspacing="0" style="font-size:1;">
+			<tr>
+				<td>
+					<img src="../images/icons/Ref.gif" style="border:none" onclick="movePopupPositionToReferenceIconPosition();resetPopupForReference();switchPopupShowHideStatus();" />				</td>
+			</tr>
+		</table>
+	</div>
+	<div style="position:absolute; z-index:1; visibility:hidden; " id="subdiagramIconLayer">
+		<table border="0" cellpadding="3" cellspacing="0" style="font-size:1;">
+			<tr>
+				<td>
+					<img src="../images/icons/Subdiagram.gif" style="border:none" onclick="movePopupPositionToSubdiagramIconPosition();resetPopupForSubdiagram();switchPopupShowHideStatus();" />				</td>
+			</tr>
+		</table>
+	</div>
+	<div style="position:absolute; z-index:1; visibility:hidden; " id="transitorIconLayer">
+		<table border="0" cellpadding="3" cellspacing="0" style="font-size:1;">
+			<tr>
+				<td>
+					<img src="../images/icons/Transitor.gif" style="border:none" onclick="movePopupPositionToTransitorIconPosition();resetPopupForTransitor();switchPopupShowHideStatus();" />				</td>
+			</tr>
+		</table>
+	</div>
+	<div style="position:absolute; z-index:1; visibility:hidden; " id="documentationIconLayer">
+		<table border="0" cellpadding="3" cellspacing="0" style="font-size:1;">
+			<tr>
+				<td>
+					<img src="../images/icons/Documentation.png" style="border:none" />				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="HeaderText">
+		Human Rights Ontology	</div>
+	<table border="0" cellpadding="0" width="100%" cellspacing="0">
+		<tr>
+			<td class="HeaderLine1">
+			</td>
+		</tr>
+		<tr>
+			<td class="HeaderLine2">
+			</td>
+		</tr>
+		<tr>
+			<td class="HeaderLine3">
+			</td>
+		</tr>
+	</table>
+	<div style="position:absolute; z-index:21; visibility:hidden" id="referencedBys">
+		<table border="0" width="100%" style="border-style:solid; border-width:1px; border-color:#000000; background:#FFFFFF; width:250px" id="referencedBysTable">
+		</table>
+	</div>
+	<div style="position:absolute; z-index:21; visibility:hidden" id="vplink">
+		<table border="1" cellpadding="0" cellspacing="0" bordercolor="#A9BFD3">
+			<tr>
+				<td>
+					<table border="0" cellpadding="0" width="100%" cellspacing="0">
+						<tr style="background:#DDDDDD">
+							<td style="font-size: 12px;" align="left">
+								<select onchange="vpLinkToggleName()" id="vplink-linkType">
+	<option value="Project Link">Project Link</option>
+	<option value="Page URL">Page URL</option>
+</select>
+							</td>
+							<td style="font-size: 12px;" align="right">
+								<input onclick="javascript: vpLinkToggleName()" id="vplink-checkbox" type="checkbox" />
+								<label for="vplink-checkbox">with Name</label>							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<textarea id="vplink-text" style="width: 348px; height: 60px; border-color: #7EADD9; outline: none;"></textarea>				</td>
+			</tr>
+		</table>
+	</div>
+	<p class="PageTitle">
+		<span id="PageTitleText">
+			Class Diagram - SIMPLE 2 Actions and Consequences (3-5)		</span>
+<a onclick="javascript: showVpLink('Human Rights Ontology55_SIMPLE_HS_phase4.vpp://diagram/3i7InAGD.AACARNu', 'SIMPLE 2 Actions and Consequences (3-5)\nHuman Rights Ontology55_SIMPLE_HS_phase4.vpp://diagram/3i7InAGD.AACARNu', 'SIMPLE 2 Actions and Consequences (3-5)', this); return false;" style="padding-left: 16px; font-size: 12px" href="#"><img src="../images/icons/link.png" border="0"> link</a>	</p>
+	<div style="position: relative; padding-bottom: 20px;">
+		<table border="0" cellpadding="0" width="100%" cellspacing="0" style="position: absolute; top: 0; left: 0; z-index: 20;" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon(),hideLinkPopup(),hideReferencedBys();">
+			<tr>
+				<td>
+<span class="TableContent">Jump to:</span>					<select id="SelectShape" class="TableContent" onChange="scrollWin('diagram', this.value);hideLinkPopup();showSpotLight('diagram', this.value)">
+<option value="">Please select a model element</option>
+<option value="shape|718.0|2.0|195.0|129.0|Class_IZ2s5gGD_AACARc0.html|Class_IZ2s5gGD_AACARc0.html|QZ2s5gGD.AACARcy" id="optionQZ2s5gGD.AACARcy">&lt;Causation&gt;  Causation : Class</option>
+<option value="shape|865.0|163.0|220.0|375.0|Class_kfTXEgGD_AACAUtQ.html|Class_kfTXEgGD_AACAUtQ.html|EfTXEgGD.AACAUtO" id="optionEfTXEgGD.AACAUtO">&lt;Consequence For Agent&gt;  Consequence For Agent : Class</option>
+<option value="shape|831.0|635.0|185.0|149.0|Class_0vTXEgGD_AACAUtI.html|Class_0vTXEgGD_AACAUtI.html|YvTXEgGD.AACAUtG" id="optionYvTXEgGD.AACAUtG">&lt;UFO-C: Agent&gt; Agent : Class</option>
+<option value="shape|790.0|355.0|97.0|68.0|Class_gcDT4gGD_AACAUGN.html|Class_gcDT4gGD_AACAUGN.html|_sDT4gGD.AACAUGL" id="option_sDT4gGD.AACAUGL">DEF-DateTime : Class</option>
+<option value="shape|925.0|459.0|97.0|72.0|Class_OB5T4gGD_AACAUFr.html|Class_OB5T4gGD_AACAUFr.html|mB5T4gGD.AACAUFp" id="optionmB5T4gGD.AACAUFp">DEF-Time : Class</option>
+<option value="shape|925.0|355.0|97.0|91.0|Class_XTHj4gGD_AACAUEj.html|Class_XTHj4gGD_AACAUEj.html|XTHj4gGD.AACAUEi" id="optionXTHj4gGD.AACAUEi">DEF-Date : Class</option>
+<option value="shape|75.0|260.0|501.0|192.0|Class_UpOh4gGD_AACAS_I.html|Class_UpOh4gGD_AACAS_I.html|4pOh4gGD.AACAS.G" id="option4pOh4gGD.AACAS.G">&lt;UFO-B: Event&gt; Event : Class</option>
+</select>				</td>
+			</tr>
+		</table>
+		<table border="0" cellpadding="0" width="100%" cellspacing="0" style="position: relative; top: 24;">
+			<tr>
+				<td>
+					<img id="diagram" src="../images/SIMPLE_2_Actions_and_Consequences_35.png" usemap="#diagram_map" class="Image" width="1114" height="788"/>
+					<map name="diagram_map">
+<area imageId="diagram" coords="509.0, 162.0, 509.0, 165.0, 506.0, 165.0, 506.0, 179.0, 509.0, 179.0, 509.0, 260.0, 523.0, 260.0, 523.0, 179.0, 684.0, 179.0, 684.0, 275.0, 576.0, 275.0, 576.0, 289.0, 684.0, 289.0, 684.0, 292.0, 698.0, 292.0, 698.0, 289.0, 701.0, 289.0, 701.0, 275.0, 698.0, 275.0, 698.0, 179.0, 701.0, 179.0, 701.0, 165.0, 698.0, 165.0, 698.0, 162.0, 684.0, 162.0, 684.0, 165.0, 523.0, 165.0, 523.0, 162.0" coords2="509.0, 162.0, 509.0, 165.0, 506.0, 165.0, 506.0, 179.0, 509.0, 179.0, 509.0, 260.0, 523.0, 260.0, 523.0, 179.0, 684.0, 179.0, 684.0, 275.0, 576.0, 275.0, 576.0, 289.0, 684.0, 289.0, 684.0, 292.0, 698.0, 292.0, 698.0, 289.0, 701.0, 289.0, 701.0, 275.0, 698.0, 275.0, 698.0, 179.0, 701.0, 179.0, 701.0, 165.0, 698.0, 165.0, 698.0, 162.0, 684.0, 162.0, 684.0, 165.0, 523.0, 165.0, 523.0, 162.0" shape="poly" alt="causes:Association" id="areadiagram_map_npOh4gGD.AACAS.O_default" href="Association_XpOh4gGD_AACAS_Q.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="887.0, 408.0, 887.0, 422.0, 925.0, 422.0, 925.0, 408.0" coords2="887.0, 408.0, 887.0, 422.0, 925.0, 422.0, 925.0, 408.0" shape="poly" alt=":Association" id="areadiagram_map_0.pL4gGD.AACAUO6_default" href="Association_XepL4gGD_AACAUO1.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="851.0, 423.0, 851.0, 462.0, 848.0, 462.0, 848.0, 476.0, 851.0, 476.0, 851.0, 479.0, 865.0, 479.0, 865.0, 476.0, 925.0, 476.0, 925.0, 462.0, 865.0, 462.0, 865.0, 423.0" coords2="851.0, 423.0, 851.0, 462.0, 848.0, 462.0, 848.0, 476.0, 851.0, 476.0, 851.0, 479.0, 865.0, 479.0, 865.0, 476.0, 925.0, 476.0, 925.0, 462.0, 865.0, 462.0, 865.0, 423.0" shape="poly" alt=":Association" id="areadiagram_map_XS5L4gGD.AACAUPG_default" href="Association_lS5L4gGD_AACAUPB.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="1003.0, 538.0, 1003.0, 635.0, 1016.0, 635.0, 1016.0, 644.0, 1017.0, 644.0, 1017.0, 538.0" coords2="1003.0, 538.0, 1003.0, 635.0, 1016.0, 635.0, 1016.0, 644.0, 1017.0, 644.0, 1017.0, 538.0" shape="poly" alt="affected by:Association" id="areadiagram_map_6_TXEgGD.AACAUtV_default" href="Association_G_TXEgGD_AACAUtX.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="576.0, 424.0, 576.0, 438.0, 865.0, 438.0, 865.0, 424.0" coords2="576.0, 424.0, 576.0, 438.0, 865.0, 438.0, 865.0, 424.0" shape="poly" alt="directly causes:Association" id="areadiagram_map_wzfXEgGD.AACAUuA_default" href="Association_7TfXEgGD_AACAUt7.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="576.0, 402.0, 576.0, 416.0, 790.0, 416.0, 790.0, 402.0" coords2="576.0, 402.0, 576.0, 416.0, 790.0, 416.0, 790.0, 402.0" shape="poly" alt=":Association" id="areadiagram_map_wkBL4gGD.AACAUIC_default" href="Association_TEBL4gGD_AACAUH9.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="530.0, 452.0, 530.0, 647.0, 527.0, 647.0, 527.0, 661.0, 530.0, 661.0, 530.0, 664.0, 544.0, 664.0, 544.0, 661.0, 831.0, 661.0, 831.0, 647.0, 544.0, 647.0, 544.0, 452.0" coords2="530.0, 452.0, 530.0, 647.0, 527.0, 647.0, 527.0, 661.0, 530.0, 661.0, 530.0, 664.0, 544.0, 664.0, 544.0, 661.0, 831.0, 661.0, 831.0, 647.0, 544.0, 647.0, 544.0, 452.0" shape="poly" alt=":Association" id="areadiagram_map_V9iwpgGD.AACARPI_default" href="Association_G9iwpgGD_AACARPD.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="-5.0, 168.0, -5.0, 171.0, -8.0, 171.0, -8.0, 185.0, -5.0, 185.0, -5.0, 341.0, -8.0, 341.0, -8.0, 355.0, -5.0, 355.0, -5.0, 358.0, 9.0, 358.0, 9.0, 355.0, 75.0, 355.0, 75.0, 341.0, 9.0, 341.0, 9.0, 185.0, 318.0, 185.0, 318.0, 260.0, 332.0, 260.0, 332.0, 185.0, 335.0, 185.0, 335.0, 171.0, 332.0, 171.0, 332.0, 168.0, 318.0, 168.0, 318.0, 171.0, 9.0, 171.0, 9.0, 168.0" coords2="-5.0, 168.0, -5.0, 171.0, -8.0, 171.0, -8.0, 185.0, -5.0, 185.0, -5.0, 341.0, -8.0, 341.0, -8.0, 355.0, -5.0, 355.0, -5.0, 358.0, 9.0, 358.0, 9.0, 355.0, 75.0, 355.0, 75.0, 341.0, 9.0, 341.0, 9.0, 185.0, 318.0, 185.0, 318.0, 260.0, 332.0, 260.0, 332.0, 185.0, 335.0, 185.0, 335.0, 171.0, 332.0, 171.0, 332.0, 168.0, 318.0, 168.0, 318.0, 171.0, 9.0, 171.0, 9.0, 168.0" shape="poly" alt="has part:Association" id="areadiagram_map_Ep805gGD.AACARZK_default" href="Association_Gp_U5gGD_AACARYl.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="472.0, 12.0, 472.0, 15.0, 469.0, 15.0, 469.0, 29.0, 472.0, 29.0, 472.0, 260.0, 486.0, 260.0, 486.0, 29.0, 718.0, 29.0, 718.0, 15.0, 486.0, 15.0, 486.0, 12.0" coords2="472.0, 12.0, 472.0, 15.0, 469.0, 15.0, 469.0, 29.0, 472.0, 29.0, 472.0, 260.0, 486.0, 260.0, 486.0, 29.0, 718.0, 29.0, 718.0, 15.0, 486.0, 15.0, 486.0, 12.0" shape="poly" alt=":Association" id="areadiagram_map_pkxs5gGD.AACARdN_default" href="Association_skxs5gGD_AACARdI.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="832.0, 131.0, 832.0, 307.0, 576.0, 307.0, 576.0, 321.0, 832.0, 321.0, 832.0, 324.0, 846.0, 324.0, 846.0, 321.0, 849.0, 321.0, 849.0, 307.0, 846.0, 307.0, 846.0, 131.0" coords2="832.0, 131.0, 832.0, 307.0, 576.0, 307.0, 576.0, 321.0, 832.0, 321.0, 832.0, 324.0, 846.0, 324.0, 846.0, 321.0, 849.0, 321.0, 849.0, 307.0, 846.0, 307.0, 846.0, 131.0" shape="poly" alt=":Association" id="areadiagram_map_Sips5gGD.AACARdX_default" href="Association_3Cps5gGD_AACARdS.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="576.0, 352.0, 576.0, 366.0, 865.0, 366.0, 865.0, 352.0" coords2="576.0, 352.0, 576.0, 366.0, 865.0, 366.0, 865.0, 352.0" shape="poly" alt="intented effect:Association" id="areadiagram_map_c.NqRQGD.AACASSG_default" href="Association_beNqRQGD_AACASSB.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="718, 2, 913, 131" coords2="718, 2, 913, 131" shape="rect" alt="&lt;Causation&gt;  Causation:Class" id="areadiagram_map_QZ2s5gGD.AACARcy_default" href="Class_IZ2s5gGD_AACARc0.html" onmouseover="storeReferenceAndSubdiagramInfos('diagram','718, 2, 913, 131',new Array(),new Array(),new Array(new Array('https://docs.google.com/spreadsheets/d/16b4T_x9lBXVib2w42D863mFszxpWHsqFEhNsBC1rexs/','HURIDOCS Microthesauri: 22-Types of Chain of Events')),new Array(),new Array(),new Array(),new Array(),new Array(),new Array()),showReferenceIcon('diagram', '718, 2, 913, 131'),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="831, 635, 1016, 784" coords2="831, 635, 1016, 784" shape="rect" alt="&lt;UFO-C: Agent&gt; Agent:Class" id="areadiagram_map_YvTXEgGD.AACAUtG_default" href="Class_0vTXEgGD_AACAUtI.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="790, 355, 887, 423" coords2="790, 355, 887, 423" shape="rect" alt="DEF-DateTime:Class" id="areadiagram_map__sDT4gGD.AACAUGL_default" href="Class_gcDT4gGD_AACAUGN.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="925, 459, 1022, 531" coords2="925, 459, 1022, 531" shape="rect" alt="DEF-Time:Class" id="areadiagram_map_mB5T4gGD.AACAUFp_default" href="Class_OB5T4gGD_AACAUFr.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="925, 355, 1022, 446" coords2="925, 355, 1022, 446" shape="rect" alt="DEF-Date:Class" id="areadiagram_map_XTHj4gGD.AACAUEi_default" href="Class_XTHj4gGD_AACAUEj.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="865, 163, 1085, 538" coords2="865, 163, 1085, 538" shape="rect" alt="&lt;Consequence For Agent&gt;  Consequence For Agent:Class" id="areadiagram_map_EfTXEgGD.AACAUtO_default" href="Class_kfTXEgGD_AACAUtQ.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="75, 260, 576, 452" coords2="75, 260, 576, 452" shape="rect" alt="&lt;UFO-B: Event&gt; Event:Class" id="areadiagram_map_4pOh4gGD.AACAS.G_default" href="Class_UpOh4gGD_AACAS_I.html" onmouseover="storeReferenceAndSubdiagramInfos('diagram','75, 260, 576, 452',new Array(),new Array(),new Array(new Array('https://docs.google.com/spreadsheets/d/16b4T_x9lBXVib2w42D863mFszxpWHsqFEhNsBC1rexs/','HURIDOCS Microthesauri: 22-Types of Chain of Events'),new Array('https://docs.google.com/spreadsheets/d/141H_9xtwI5PEaQjrJ-485Z5rmOngur1moUFtX1_EqOY','HURIDOCS Microthesauri: 4-Types of Acts')),new Array(),new Array(),new Array(),new Array(),new Array(),new Array()),showReferenceIcon('diagram', '75, 260, 576, 452'),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+</map>
+				</td>
+			</tr>
+		</table>
+		<p>
+		</p>
+	</div>
+	<table border="0" cellpadding="0" width="100%" cellspacing="0">
+		<tr>
+			<td class="Category">
+				Model Elements			</td>
+		</tr>
+		<tr>
+			<td style="height: 5px">
+			</td>
+		</tr>
+	</table>
+	<table border="0" cellpadding="0" width="100%" cellspacing="0">
+		<tr>
+			<td colSpan="4" class="TableHeaderLine">
+			</td>
+		</tr>
+		<tr>
+			<td colSpan="4" class="TableHeaderLine1">
+			</td>
+		</tr>
+		<tr class="TableHeader">
+			<td class="TableCellSpaceHolder10Px">
+			</td>
+			<td width="30%">
+<span class="TableHeaderText">Name</span>			</td>
+			<td class="TableCellSpaceHolder20Px">
+			</td>
+			<td>
+<span class="TableHeaderText">Description</span>			</td>
+		</tr>
+		<tr>
+			<td colSpan="4" class="TableHeaderLine2">
+			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_IZ2s5gGD_AACARc0.html" class="ItemLink">&lt;Causation&gt;  Causation : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_kfTXEgGD_AACAUtQ.html" class="ItemLink">&lt;Consequence For Agent&gt;  Consequence For Agent : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_0vTXEgGD_AACAUtI.html" class="ItemLink">&lt;UFO-C: Agent&gt; Agent : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_gcDT4gGD_AACAUGN.html" class="ItemLink">DEF-DateTime : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_OB5T4gGD_AACAUFr.html" class="ItemLink">DEF-Time : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_XTHj4gGD_AACAUEj.html" class="ItemLink">DEF-Date : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_UpOh4gGD_AACAS_I.html" class="ItemLink">&lt;UFO-B: Event&gt; Event : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+	</table>
+	<table border="0" cellpadding="0" width="100%" cellspacing="0">
+		<tr>
+			<td class="TableCellSpaceHolder1PxTall">
+			</td>
+		</tr>
+		<tr>
+			<td class="TableFooter">
+			</td>
+		</tr>
+	</table>
+	<div style="height: 20px">
+	</div>
+	<table border="0" cellpadding="0" width="100%" cellspacing="0">
+		<tr>
+			<td class="FooterLine">
+			</td>
+		</tr>
+	</table>
+	<div class="HeaderText">
+		Human Rights Ontology	</div>
+</body>
+</html>
