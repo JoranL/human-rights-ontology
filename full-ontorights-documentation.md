@@ -1,4 +1,5 @@
 [Back to home page](index.md)
+
 [Access OntoRights](ontorights-access.md)
 
 # Full OntoRights Documentation

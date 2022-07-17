@@ -16,7 +16,7 @@ The first version of OntoRights was the result of a [master thesis](https://docs
 
 The project was done in collaboration with [HURIDOCS](https://huridocs.org/), an NGO that helps human rights groups gather, organise and use information. Contact person at HURIDOCS was first Kristin Antin, knowledge collaboration lead, and later Salva Lacruz, programme manager.
 
-### Get in touch
+## Get in touch
 If you are interested in using OntoRights or simply discuss ontologies and data modelling in the human rights domain, please don't hesitate to reach out.
 
 Jöran Lindeberg  
