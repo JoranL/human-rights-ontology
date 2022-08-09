@@ -15,7 +15,7 @@ The OntoRights builds on Unified Foundational Ontology (UFO), and some of its co
 ## Delimitations of the Manual
 The manual does not cover how to identify your needs and important concepts. This can be done by for example following HURIDOCS’ community resource until step 4.1.The manual does not cover how to implement a conceptual model into a physical data model (including for example how to handle sub-classes, assign foreign keys, and so-called association tables to handle many-to-many relations). Nor does in address general systems management challenges such as data migration, user access privileges, or management of information security and privacy.
 
-## How Simple OntoRights Was Designed
+## How Simple OntoRights was Designed
 In short, the following steps were taken to design OntoRights:
 1. Initial discussions with HURIDOCS and a literature review.
 2. A document survey of the content of parts of the OHCHR Human Rights Monitoring Manual and HURIDOCS’ Events Standard format, in order to get a comprehensive view of the relevant concepts and corresponding relations. More than 500 concepts were identified.
@@ -62,7 +62,7 @@ An **Official Legal Process**, such as a criminal investigation, may have negati
 
 _Note for adjustments_: This module can be seen as a submodule of Module 2, but can also stand alone, including only Official Legal Record, Official Legal Process, and Legal Process Relation.
 
-## **How to Adapt Simple OntoRights to a Tailored Conceptual Data Model
+## How to Adapt Simple OntoRights to a Tailored Conceptual Data Model
 1. Study the diagram of each module and read about them in the section above for better understanding.
 2. Decide the tool you will use. Most efficient is probably to open the Simple OntoRights project with the above-mentioned Plugin for Visual Paradigm. Another tool that is easy to use is Diagrams.net.
 3. Select the modules that contain your identified concepts.
