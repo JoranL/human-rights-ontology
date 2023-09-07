@@ -7,7 +7,7 @@ Here you will find links to resources referred to in the paper "Designing an Ont
 
 [Version 1.0 of Full OntoRights](https://joranl.github.io/human-rights-ontology/vp-projects/Full_OntoRights_v1_0/)
 
-[Version 1.0 of Simple OntoRights](https://joranl.github.io/human-rights-ontology/vp-projects/Simple_OntoRights_v1_0/)
+[Version 1.0 of Easy OntoRights](https://joranl.github.io/human-rights-ontology/vp-projects/Simple_OntoRights_v1_0/)
 
 [Instantiation designed for Committe for Justice](https://joranl.github.io/human-rights-ontology/vp-projects/CfJ_instantiation/)
 
