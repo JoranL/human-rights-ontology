@@ -5,7 +5,7 @@ OntoRights is a well-founded ontology the domain of human rights violations docu
 An ontology is a shared data model that can be reused and adapted for many different systems and applications. Ontologies are valuable for database designing because they reduce the need of reinventing the wheel. They can also support systems integration and artificial intelligence. Here you can read more about other benefits of ontologies: [Explaining Ontologies to Your Boss](https://ontology-explained.com/2020/explain-boss/).
 
 ## How is OntoRights useful?
-The primary purpose of Simple OntoRights is to support human rights groups that are building case databases. [Read more in the Easy OntoRights manual](simple-ontorights-documentation.md).
+The primary purpose of Easy OntoRights is to support human rights groups that are building case databases. [Read more in the Easy OntoRights manual](simple-ontorights-documentation.md).
 
 For other purposes, Full OntoRights is probably more useful. [Read more in the Full OntoRights documentation](full-ontorights-documentation.md). Both versions can be [accessed here](ontorights-access.md).
 
