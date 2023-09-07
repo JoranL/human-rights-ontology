@@ -1,5 +1,5 @@
 ## OntoRights
-OntoRights is a well-founded ontology the domain of human rights violations documentation. It exists in two versions: Full OntoRights and Simple OntoRights.
+OntoRights is a well-founded ontology the domain of human rights violations documentation. It exists in two versions: Full OntoRights and Easy OntoRights (earlier called Simple OntoRights).
 
 ## What is an ontology?
 An ontology is a shared data model that can be reused and adapted for many different systems and applications. Ontologies are valuable for database designing because they reduce the need of reinventing the wheel. They can also support systems integration and artificial intelligence. Here you can read more about other benefits of ontologies: [Explaining Ontologies to Your Boss](https://ontology-explained.com/2020/explain-boss/).
