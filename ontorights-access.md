@@ -3,7 +3,7 @@
 [Access OntoRights](ontorights-access.md)
 
 ## Access Full_OntoRights
-OntoRights exists in two versions: Full OntoRights and Simple Ontorights. Both can be accessed either as static websites or as Visual Paradigm projects.
+OntoRights exists in two versions: Full OntoRights and Easy Ontorights. Both can be accessed either as static websites or as Visual Paradigm projects.
 
 | **Version** | **Full**               | **Easy**             |
 |-------------|------------------------|------------------------|
