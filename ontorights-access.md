@@ -7,4 +7,5 @@ OntoRights exists in two versions: Full OntoRights and Easy Ontorights. Both can
 
 | **Version** | **Full**               | **Easy**             |
 |-------------|------------------------|------------------------|
+| 1.1         | [website](vp-projects/Full_OntoRights_v1_1/), [project file](vp-projects/Full_OntoRights_v1_1.vpp) | [website](vp-projects/Easy_OntoRights_v1_1), [project file](vp-projects/Easy_OntoRights_v1_1.vpp) |
 | 1.0         | [website](vp-projects/Full_OntoRights_v1_0), [project file](vp-projects/Full_OntoRights_v1_0.vpp) | [website](vp-projects/Simple_OntoRights_v1_0), [project file](vp-projects/Simple_OntoRights_v1_0.vpp) |
