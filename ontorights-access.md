@@ -7,7 +7,7 @@ OntoRights exists in two versions: Full OntoRights and Easy Ontorights. Both can
 
 | **Version** | **Date**             | **Full**               | **Easy**             | **Basic**             | 
 |-------------|------------------------|------------------------|------------------------|------------------------|
-| 1.1         | 2023-09-08         | [website](vp-projects/Full_OntoRights_v1_1/), [project file](vp-projects/Full_OntoRights_v1_1.vpp) | [website](vp-projects/Easy_OntoRights_v1_1), [project file](vp-projects/Easy_OntoRights_v1_1.vpp) | [Diagram](https://drive.google.com/file/d/1uBOPICySX00OqzBOiQqQKAim-gSMyJCP/view?usp=sharing)|
+| 1.1         | 2023-09-08         | [website](vp-projects/Full_OntoRights_v1_1/), [project file](vp-projects/Full_OntoRights_v1_1.vpp) | [website](vp-projects/Easy_OntoRights_v1_1), [project file](vp-projects/Easy_OntoRights_v1_1/Easy_OntoRights_v1_1.vpp) | [Diagram](https://drive.google.com/file/d/1uBOPICySX00OqzBOiQqQKAim-gSMyJCP/view?usp=sharing)|
 | 1.0         | 2022-06-01         | [website](vp-projects/Full_OntoRights_v1_0), [project file](vp-projects/Full_OntoRights_v1_0.vpp) | [website](vp-projects/Simple_OntoRights_v1_0), [project file](vp-projects/Simple_OntoRights_v1_0.vpp) |N/A|
 
 
