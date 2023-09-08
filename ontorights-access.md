@@ -2,7 +2,7 @@
 
 [Access OntoRights](ontorights-access.md)
 
-## Access Full_OntoRights
+## Access OntoRights
 OntoRights exists in two versions: Full OntoRights and Easy Ontorights. Both can be accessed either as static websites or as Visual Paradigm projects. Additionally, there is Basic OntoRights, which is rather a pedagocical tool drawn with the informal notation used in HURIDOCS' [Community Rescource](https://huridocs.org/community-resources/designing-your-conceptual-data-model/).
 
 | **Version** | **Date**             | **Full**               | **Easy**             | **Basic**             | 
