@@ -3,12 +3,14 @@
 [Access OntoRights](ontorights-access.md)
 
 ## Access Full_OntoRights
-OntoRights exists in two versions: Full OntoRights and Easy Ontorights. Both can be accessed either as static websites or as Visual Paradigm projects.
+OntoRights exists in two versions: Full OntoRights and Easy Ontorights. Both can be accessed either as static websites or as Visual Paradigm projects. Additionally, there is Basic OntoRights, which is rather a pedagocical tool drawn with the informal notation used in HURIDOCS' [Community Rescource](https://huridocs.org/community-resources/designing-your-conceptual-data-model/).
 
-| **Version** | **Date**             | **Full**               | **Easy**             | 
-|-------------|------------------------|------------------------|------------------------|
-| 1.1         | 2023-09-08         | [website](vp-projects/Full_OntoRights_v1_1/), [project file](vp-projects/Full_OntoRights_v1_1.vpp) | [website](vp-projects/Easy_OntoRights_v1_1), [project file](vp-projects/Easy_OntoRights_v1_1.vpp) |
-| 1.0         | 2022-06-01         | [website](vp-projects/Full_OntoRights_v1_0), [project file](vp-projects/Full_OntoRights_v1_0.vpp) | [website](vp-projects/Simple_OntoRights_v1_0), [project file](vp-projects/Simple_OntoRights_v1_0.vpp) |
+| **Version** | **Date**             | **Full**               | **Easy**             | **Basic**             | 
+|-------------|------------------------|------------------------|------------------------|------------------------|
+| 1.1         | 2023-09-08         | [website](vp-projects/Full_OntoRights_v1_1/), [project file](vp-projects/Full_OntoRights_v1_1.vpp) | [website](vp-projects/Easy_OntoRights_v1_1), [project file](vp-projects/Easy_OntoRights_v1_1.vpp) | [Diagram](https://drive.google.com/file/d/1uBOPICySX00OqzBOiQqQKAim-gSMyJCP/view?usp=sharing)|
+| 1.0         | 2022-06-01         | [website](vp-projects/Full_OntoRights_v1_0), [project file](vp-projects/Full_OntoRights_v1_0.vpp) | [website](vp-projects/Simple_OntoRights_v1_0), [project file](vp-projects/Simple_OntoRights_v1_0.vpp) |N/A|
+
+
 
 ## Version Comments
 ### Changes from OntoRights 1.0 to 1.1:
