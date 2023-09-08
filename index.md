@@ -5,14 +5,14 @@ OntoRights is a well-founded ontology the domain of human rights violations docu
 An ontology is a shared data model that can be reused and adapted for many different systems and applications. Ontologies are valuable for database designing because they reduce the need of reinventing the wheel. They can also support systems integration and artificial intelligence. Here you can read more about other benefits of ontologies: [Explaining Ontologies to Your Boss](https://ontology-explained.com/2020/explain-boss/).
 
 ## How is OntoRights useful?
-The primary purpose of OntoRights is to support human rights groups that are building case databases. [Read more in the Easy OntoRights manual](easy-ontorights-documentation-v1_1.md). 
+The primary purpose of OntoRights is to support human rights groups that are building case databases. For this, Basic and Easy OntoRights are most useful. [Read more in the Easy OntoRights manual](easy-ontorights-documentation-v1_1.md). 
 
-For other purposes, Full OntoRights is probably more useful. [Read more in the Full OntoRights documentation](full-ontorights-documentation.md). Both versions can be [accessed here](ontorights-access.md).
+For other purposes, Full OntoRights is probably more relavant. [Read more in the Full OntoRights documentation](full-ontorights-documentation.md). All versions can be [accessed here](ontorights-access.md).
 
 ## Background
 The first version of OntoRights was the result of a master thesis ([pdf](files/Lindeberg_2022_Ontology_Design_Master_Thesis.pdf) or [Google Doc](https://docs.google.com/document/d/1JL03YWWXHXQJ5mIXPPwEcz7l_mkSwAsA4XO4uh1uba0/edit?usp=sharing)) research project by [Jöran Lindeberg](https://se.linkedin.com/in/joran-lindeberg) at the Department of Computer and Systems Sciences (DSV)], Stockholm University. Supervisor was Associate Professor [Martin Henkel](https://www.su.se/english/profiles/mhenk-1.182179).
 
-The project was done in collaboration with [HURIDOCS](https://huridocs.org/), an NGO that helps human rights groups gather, organise and use information. Contact person at HURIDOCS was first Kristin Antin, knowledge collaboration lead, and later Salva Lacruz, programme manager.
+The project was done in collaboration with [HURIDOCS](https://huridocs.org/), an NGO that helps human rights groups gather, organise and use information.  Contact person at HURIDOCS was first Kristin Antin, knowledge collaboration lead, and later Salva Lacruz, programme manager.
 
 ## Get in touch
 If you are interested in using OntoRights or simply discuss ontologies and data modelling in the human rights domain, please don't hesitate to reach out.
