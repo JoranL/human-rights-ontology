@@ -1,11 +1,11 @@
 ## OntoRights
-OntoRights is a well-founded ontology the domain of human rights violations documentation. It exists in two versions: Full OntoRights and Easy OntoRights (earlier called Simple OntoRights). Additionally, there is Basic OntoRights, a very simple diagram in an informal notation meant to serve as a pedagogicial tool.
+OntoRights is a well-founded ontology the domain of human rights violations documentation. It exists in two versions: Full OntoRights and Easy OntoRights. Additionally, there is Basic OntoRights, a very simple diagram in an informal notation meant to serve as a pedagogicial tool.
 
 ## What is an ontology?
 An ontology is a shared data model that can be reused and adapted for many different systems and applications. Ontologies are valuable for database designing because they reduce the need of reinventing the wheel. They can also support systems integration and artificial intelligence. Here you can read more about other benefits of ontologies: [Explaining Ontologies to Your Boss](https://ontology-explained.com/2020/explain-boss/).
 
 ## How is OntoRights useful?
-The primary purpose of OntoRights is to support human rights groups that are building case databases. [Read more in the Easy OntoRights manual](simple-ontorights-documentation.md). 
+The primary purpose of OntoRights is to support human rights groups that are building case databases. [Read more in the Easy OntoRights manual](easy-ontorights-documentation-v1_1.md). 
 
 For other purposes, Full OntoRights is probably more useful. [Read more in the Full OntoRights documentation](full-ontorights-documentation.md). Both versions can be [accessed here](ontorights-access.md).
 
