@@ -28,6 +28,6 @@ The project was done in collaboration with [HURIDOCS](https://huridocs.org/), an
 If you are interested in using OntoRights or simply discuss ontologies and data modelling in the human rights domain, please don't hesitate to reach out.
 
 Jöran Lindeberg  
-PhD student, Department of Computer and Systems Sciences (DSV), Stockholm University
+[PhD student](https://www.su.se/profiles/jli6887-1.620851), Department of Computer and Systems Sciences (DSV), Stockholm University
 joran@dsv.su.se  
 +46 70 6016136 (Signal, Telegram, WhatsApp)
