@@ -33,3 +33,6 @@ Human Rights Violation is now also associated with Monitoring Event Participant.
 
 Module 2 Actions and Consequences (3-5)
 The following attributes of Consequence for Agent were removed: goalTransfer, goalTransferThirdAgent. 
+
+#### Basic OntoRights
+Basic OntoRights was created for the first time.
