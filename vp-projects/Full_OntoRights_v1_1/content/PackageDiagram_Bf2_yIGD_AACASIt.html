@@ -1,0 +1,476 @@
+<html>
+<head>
+	<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="report.css" type="text/css"/>
+	<title>Package Diagram - Package Diagram - Full HRO</title>
+	<script type="text/javascript" src="report.js"></script>
+	<script type="text/javascript" src="link_popup.js"></script>
+	<script type="text/javascript" src="tooltip.js"></script>
+</head>
+<body style="margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;" onload="initPage();initDiagram();initGridDiagram();">
+	<div style="position:absolute; z-index:2; visibility:hidden;border-top: 2px #FF0000 solid;" id="spotlight_top">
+	</div>
+	<div style="position:absolute; z-index:2; visibility:hidden;border-top: 2px #FF0000 solid;" id="spotlight_bottom">
+	</div>
+	<div style="position:absolute; z-index:2; visibility:hidden;border-left: 2px #FF0000 solid;" id="spotlight_left">
+	</div>
+	<div style="position:absolute; z-index:2; visibility:hidden;border-left: 2px #FF0000 solid;" id="spotlight_right">
+	</div>
+	<canvas width="100" style="position:absolute; z-index:2; visibility:hidden" id="spotlight_c" height="100">
+	</canvas>
+	<div style="position:absolute; width:100px; height:100px; z-index:1; visibility:hidden" id="spotLightResourcesTop">
+		<table border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+<a href="#top"><img style="border:none" src="../images/icons/BackToTop.gif" alt="Back to top"/></a>				</td>
+				<td>
+<a href="javascript:clearSpotLightFromOpenSpecButton();"><img style="border:none" src="../images/icons/OpenSpecification.gif" alt="Open specification"/></a>				</td>
+			</tr>
+		</table>
+	</div>
+	<div style="position:absolute; width:100px; height:100px; z-index:1; visibility:hidden" id="spotLightResourcesRight">
+		<table border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+<a href="#top"><img style="border:none" src="../images/icons/BackToTop.gif" alt="Back to top"/></a>				</td>
+			</tr>
+			<tr>
+				<td>
+<a href="javascript:clearSpotLightFromOpenSpecButton();"><img style="border:none" src="../images/icons/OpenSpecification.gif" alt="Open specification"/></a>				</td>
+			</tr>
+		</table>
+	</div>
+	<div style="position:absolute;z-index:4;visibility:hidden" id="linkPopupMenuLayer">
+		<table border="0" width="100%" style="border-style:solid; border-width:1px; border-color:#000000; background:#FFFFFF; width:250px" id="linkPopupMenuTable">
+		</table>
+	</div>
+	<div style="position:absolute; z-index:1; visibility:hidden; " id="referenceIconLayer">
+		<table border="0" cellpadding="3" cellspacing="0" style="font-size:1;">
+			<tr>
+				<td>
+					<img src="../images/icons/Ref.gif" style="border:none" onclick="movePopupPositionToReferenceIconPosition();resetPopupForReference();switchPopupShowHideStatus();" />				</td>
+			</tr>
+		</table>
+	</div>
+	<div style="position:absolute; z-index:1; visibility:hidden; " id="subdiagramIconLayer">
+		<table border="0" cellpadding="3" cellspacing="0" style="font-size:1;">
+			<tr>
+				<td>
+					<img src="../images/icons/Subdiagram.gif" style="border:none" onclick="movePopupPositionToSubdiagramIconPosition();resetPopupForSubdiagram();switchPopupShowHideStatus();" />				</td>
+			</tr>
+		</table>
+	</div>
+	<div style="position:absolute; z-index:1; visibility:hidden; " id="transitorIconLayer">
+		<table border="0" cellpadding="3" cellspacing="0" style="font-size:1;">
+			<tr>
+				<td>
+					<img src="../images/icons/Transitor.gif" style="border:none" onclick="movePopupPositionToTransitorIconPosition();resetPopupForTransitor();switchPopupShowHideStatus();" />				</td>
+			</tr>
+		</table>
+	</div>
+	<div style="position:absolute; z-index:1; visibility:hidden; " id="documentationIconLayer">
+		<table border="0" cellpadding="3" cellspacing="0" style="font-size:1;">
+			<tr>
+				<td>
+					<img src="../images/icons/Documentation.png" style="border:none" />				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="HeaderText">
+		Full OntoRights	</div>
+	<table border="0" cellpadding="0" width="100%" cellspacing="0">
+		<tr>
+			<td class="HeaderLine1">
+			</td>
+		</tr>
+		<tr>
+			<td class="HeaderLine2">
+			</td>
+		</tr>
+		<tr>
+			<td class="HeaderLine3">
+			</td>
+		</tr>
+	</table>
+	<div style="position:absolute; z-index:21; visibility:hidden" id="referencedBys">
+		<table border="0" width="100%" style="border-style:solid; border-width:1px; border-color:#000000; background:#FFFFFF; width:250px" id="referencedBysTable">
+		</table>
+	</div>
+	<div style="position:absolute; z-index:21; visibility:hidden" id="vplink">
+		<table border="1" cellpadding="0" cellspacing="0" bordercolor="#A9BFD3">
+			<tr>
+				<td>
+					<table border="0" cellpadding="0" width="100%" cellspacing="0">
+						<tr style="background:#DDDDDD">
+							<td style="font-size: 12px;" align="left">
+								<select onchange="vpLinkToggleName()" id="vplink-linkType">
+	<option value="Project Link">Project Link</option>
+	<option value="Page URL">Page URL</option>
+</select>
+							</td>
+							<td style="font-size: 12px;" align="right">
+								<input onclick="javascript: vpLinkToggleName()" id="vplink-checkbox" type="checkbox" />
+								<label for="vplink-checkbox">with Name</label>							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<textarea id="vplink-text" style="width: 348px; height: 60px; border-color: #7EADD9; outline: none;"></textarea>				</td>
+			</tr>
+		</table>
+	</div>
+	<p class="PageTitle">
+		<span id="PageTitleText">
+			Package Diagram - Package Diagram - Full HRO		</span>
+<a onclick="javascript: showVpLink('Full_OntoRights_v1_1.vpp://diagram/Bf2.yIGD.AACASIt', 'Package Diagram - Full HRO\nFull_OntoRights_v1_1.vpp://diagram/Bf2.yIGD.AACASIt', 'Package Diagram - Full HRO', this); return false;" style="padding-left: 16px; font-size: 12px" href="#"><img src="../images/icons/link.png" border="0"> link</a>	</p>
+	<div style="position: relative; padding-bottom: 20px;">
+		<table border="0" cellpadding="0" width="100%" cellspacing="0" style="position: absolute; top: 0; left: 0; z-index: 20;" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon(),hideLinkPopup(),hideReferencedBys();">
+			<tr>
+				<td>
+<span class="TableContent">Jump to:</span>					<select id="SelectShape" class="TableContent" onChange="scrollWin('diagram', this.value);hideLinkPopup();showSpotLight('diagram', this.value)">
+<option value="">Please select a model element</option>
+<option value="shape|882.0|456.0|286.0|100.0|Subsystem_QSe4KIGD_AACAS3I.html|Subsystem_QSe4KIGD_AACAS3I.html|fie4KIGD.AACAS3H" id="optionfie4KIGD.AACAS3H">Subsystem : Subsystem</option>
+<option value="shape|541.0|284.0|140.0|75.0|Package_i6h_yIGD_AACASKR.html|Package_i6h_yIGD_AACASKR.html|DSx.yIGD.AACASLL" id="optionDSx.yIGD.AACASLL">16 Legal Processes : Package</option>
+<option value="shape|364.0|284.0|140.0|75.0|Package_E6h_yIGD_AACASKM.html|Package_E6h_yIGD_AACASKM.html|tSx.yIGD.AACASLI" id="optiontSx.yIGD.AACASLI">15 Information Management : Package</option>
+<option value="shape|179.0|291.0|145.0|68.0|Package__ah_yIGD_AACASKH.html|Package__ah_yIGD_AACASKH.html|VSx.yIGD.AACASLF" id="optionVSx.yIGD.AACASLF">14 Monitoring Process : Package</option>
+<option value="shape|2.0|284.0|143.0|75.0|Package_7ah_yIGD_AACASKC.html|Package_7ah_yIGD_AACASKC.html|5Sx.yIGD.AACASLC" id="option5Sx.yIGD.AACASLC">13 Human Rights Protection System : Package</option>
+<option value="shape|541.0|189.0|140.0|77.0|Package_9ah_yIGD_AACASJ9.html|Package_9ah_yIGD_AACASJ9.html|JSx.yIGD.AACASK_" id="optionJSx.yIGD.AACASK_">12 Networks : Package</option>
+<option value="shape|364.0|189.0|140.0|77.0|Package_Zah_yIGD_AACASJ4.html|Package_Zah_yIGD_AACASJ4.html|hSx.yIGD.AACASK8" id="optionhSx.yIGD.AACASK8">11 Detention Centres : Package</option>
+<option value="shape|179.0|189.0|145.0|77.0|Package_eah_yIGD_AACASJz.html|Package_eah_yIGD_AACASJz.html|eSx.yIGD.AACASK5" id="optioneSx.yIGD.AACASK5">10 Places : Package</option>
+<option value="shape|2.0|189.0|143.0|77.0|Package_aah_yIGD_AACASJu.html|Package_aah_yIGD_AACASJu.html|WSx.yIGD.AACASK2" id="optionWSx.yIGD.AACASK2">9 Organisations : Package</option>
+<option value="shape|541.0|97.0|140.0|74.0|Package__qh_yIGD_AACASJp.html|Package__qh_yIGD_AACASJp.html|6Sx.yIGD.AACASKz" id="option6Sx.yIGD.AACASKz">8 Social Agents : Package</option>
+<option value="shape|364.0|97.0|140.0|74.0|Package_Dqh_yIGD_AACASJk.html|Package_Dqh_yIGD_AACASJk.html|ySx.yIGD.AACASKw" id="optionySx.yIGD.AACASKw">7 Agent Categories : Package</option>
+<option value="shape|179.0|97.0|145.0|74.0|Package_yqh_yIGD_AACASJf.html|Package_yqh_yIGD_AACASJf.html|CSx.yIGD.AACASKt" id="optionCSx.yIGD.AACASKt">6 Natural Persons : Package</option>
+<option value="shape|2.0|97.0|143.0|74.0|Package_Uqh_yIGD_AACASJa.html|Package_Uqh_yIGD_AACASJa.html|MSx.yIGD.AACASKq" id="optionMSx.yIGD.AACASKq">5 Consequences for Agent : Package</option>
+<option value="shape|541.0|2.0|140.0|76.0|Package_gqh_yIGD_AACASJV.html|Package_gqh_yIGD_AACASJV.html|kSx.yIGD.AACASKn" id="optionkSx.yIGD.AACASKn">4 Actions and Consequences : Package</option>
+<option value="shape|364.0|2.0|140.0|76.0|Package_HKh_yIGD_AACASJQ.html|Package_HKh_yIGD_AACASJQ.html|ISx.yIGD.AACASKk" id="optionISx.yIGD.AACASKk">3 Events : Package</option>
+<option value="shape|179.0|2.0|148.0|76.0|Package_DKh_yIGD_AACASJL.html|Package_DKh_yIGD_AACASJL.html|gSx.yIGD.AACASKh" id="optiongSx.yIGD.AACASKh">2 Human Rights Violations : Package</option>
+<option value="shape|2.0|2.0|143.0|76.0|Package_hKh_yIGD_AACASJG.html|Package_hKh_yIGD_AACASJG.html|vix.yIGD.AACASKe" id="optionvix.yIGD.AACASKe">1 Human Rights Problems : Package</option>
+</select>				</td>
+			</tr>
+		</table>
+		<table border="0" cellpadding="0" width="100%" cellspacing="0" style="position: relative; top: 24;">
+			<tr>
+				<td>
+					<img id="diagram" src="../images/Package_Diagram_Full_HRO.png" usemap="#diagram_map" class="Image" width="1172" height="560"/>
+					<map name="diagram_map">
+<area imageId="diagram" coords="882, 456, 1168, 556" coords2="882, 456, 1168, 556" shape="rect" alt="Subsystem:Subsystem" id="areadiagram_map_fie4KIGD.AACAS3H_default" href="Subsystem_QSe4KIGD_AACAS3I.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="541, 284, 681, 359" coords2="541, 284, 681, 359" shape="rect" alt="16 Legal Processes:Package" id="areadiagram_map_DSx.yIGD.AACASLL_default" href="Package_i6h_yIGD_AACASKR.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="364, 284, 504, 359" coords2="364, 284, 504, 359" shape="rect" alt="15 Information Management:Package" id="areadiagram_map_tSx.yIGD.AACASLI_default" href="Package_E6h_yIGD_AACASKM.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="179, 291, 324, 359" coords2="179, 291, 324, 359" shape="rect" alt="14 Monitoring Process:Package" id="areadiagram_map_VSx.yIGD.AACASLF_default" href="Package__ah_yIGD_AACASKH.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="2, 284, 145, 359" coords2="2, 284, 145, 359" shape="rect" alt="13 Human Rights Protection System:Package" id="areadiagram_map_5Sx.yIGD.AACASLC_default" href="Package_7ah_yIGD_AACASKC.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="541, 189, 681, 266" coords2="541, 189, 681, 266" shape="rect" alt="12 Networks:Package" id="areadiagram_map_JSx.yIGD.AACASK__default" href="Package_9ah_yIGD_AACASJ9.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="364, 189, 504, 266" coords2="364, 189, 504, 266" shape="rect" alt="11 Detention Centres:Package" id="areadiagram_map_hSx.yIGD.AACASK8_default" href="Package_Zah_yIGD_AACASJ4.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="179, 189, 324, 266" coords2="179, 189, 324, 266" shape="rect" alt="10 Places:Package" id="areadiagram_map_eSx.yIGD.AACASK5_default" href="Package_eah_yIGD_AACASJz.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="2, 189, 145, 266" coords2="2, 189, 145, 266" shape="rect" alt="9 Organisations:Package" id="areadiagram_map_WSx.yIGD.AACASK2_default" href="Package_aah_yIGD_AACASJu.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="541, 97, 681, 171" coords2="541, 97, 681, 171" shape="rect" alt="8 Social Agents:Package" id="areadiagram_map_6Sx.yIGD.AACASKz_default" href="Package__qh_yIGD_AACASJp.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="364, 97, 504, 171" coords2="364, 97, 504, 171" shape="rect" alt="7 Agent Categories:Package" id="areadiagram_map_ySx.yIGD.AACASKw_default" href="Package_Dqh_yIGD_AACASJk.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="179, 97, 324, 171" coords2="179, 97, 324, 171" shape="rect" alt="6 Natural Persons:Package" id="areadiagram_map_CSx.yIGD.AACASKt_default" href="Package_yqh_yIGD_AACASJf.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="2, 97, 145, 171" coords2="2, 97, 145, 171" shape="rect" alt="5 Consequences for Agent:Package" id="areadiagram_map_MSx.yIGD.AACASKq_default" href="Package_Uqh_yIGD_AACASJa.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="541, 2, 681, 78" coords2="541, 2, 681, 78" shape="rect" alt="4 Actions and Consequences:Package" id="areadiagram_map_kSx.yIGD.AACASKn_default" href="Package_gqh_yIGD_AACASJV.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="364, 2, 504, 78" coords2="364, 2, 504, 78" shape="rect" alt="3 Events:Package" id="areadiagram_map_ISx.yIGD.AACASKk_default" href="Package_HKh_yIGD_AACASJQ.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="179, 2, 327, 78" coords2="179, 2, 327, 78" shape="rect" alt="2 Human Rights Violations:Package" id="areadiagram_map_gSx.yIGD.AACASKh_default" href="Package_DKh_yIGD_AACASJL.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="2, 2, 145, 78" coords2="2, 2, 145, 78" shape="rect" alt="1 Human Rights Problems:Package" id="areadiagram_map_vix.yIGD.AACASKe_default" href="Package_hKh_yIGD_AACASJG.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+</map>
+				</td>
+			</tr>
+		</table>
+		<p>
+		</p>
+	</div>
+	<table border="0" cellpadding="0" width="100%" cellspacing="0">
+		<tr>
+			<td class="Category">
+				Model Elements			</td>
+		</tr>
+		<tr>
+			<td style="height: 5px">
+			</td>
+		</tr>
+	</table>
+	<table border="0" cellpadding="0" width="100%" cellspacing="0">
+		<tr>
+			<td colSpan="4" class="TableHeaderLine">
+			</td>
+		</tr>
+		<tr>
+			<td colSpan="4" class="TableHeaderLine1">
+			</td>
+		</tr>
+		<tr class="TableHeader">
+			<td class="TableCellSpaceHolder10Px">
+			</td>
+			<td width="30%">
+<span class="TableHeaderText">Name</span>			</td>
+			<td class="TableCellSpaceHolder20Px">
+			</td>
+			<td>
+<span class="TableHeaderText">Description</span>			</td>
+		</tr>
+		<tr>
+			<td colSpan="4" class="TableHeaderLine2">
+			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Subsystem.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Subsystem.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Subsystem_QSe4KIGD_AACAS3I.html" class="ItemLink">Subsystem : Subsystem</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Package.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Package.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Package_i6h_yIGD_AACASKR.html" class="ItemLink">16 Legal Processes : Package</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Package.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Package.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Package_E6h_yIGD_AACASKM.html" class="ItemLink">15 Information Management : Package</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Package.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Package.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Package__ah_yIGD_AACASKH.html" class="ItemLink">14 Monitoring Process : Package</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Package.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Package.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Package_7ah_yIGD_AACASKC.html" class="ItemLink">13 Human Rights Protection System : Package</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Package.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Package.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Package_9ah_yIGD_AACASJ9.html" class="ItemLink">12 Networks : Package</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Package.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Package.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Package_Zah_yIGD_AACASJ4.html" class="ItemLink">11 Detention Centres : Package</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Package.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Package.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Package_eah_yIGD_AACASJz.html" class="ItemLink">10 Places : Package</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Package.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Package.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Package_aah_yIGD_AACASJu.html" class="ItemLink">9 Organisations : Package</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Package.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Package.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Package__qh_yIGD_AACASJp.html" class="ItemLink">8 Social Agents : Package</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Package.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Package.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Package_Dqh_yIGD_AACASJk.html" class="ItemLink">7 Agent Categories : Package</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Package.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Package.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Package_yqh_yIGD_AACASJf.html" class="ItemLink">6 Natural Persons : Package</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Package.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Package.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Package_Uqh_yIGD_AACASJa.html" class="ItemLink">5 Consequences for Agent : Package</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Package.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Package.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Package_gqh_yIGD_AACASJV.html" class="ItemLink">4 Actions and Consequences : Package</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Package.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Package.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Package_HKh_yIGD_AACASJQ.html" class="ItemLink">3 Events : Package</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Package.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Package.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Package_DKh_yIGD_AACASJL.html" class="ItemLink">2 Human Rights Violations : Package</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Package.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Package.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Package_hKh_yIGD_AACASJG.html" class="ItemLink">1 Human Rights Problems : Package</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+	</table>
+	<table border="0" cellpadding="0" width="100%" cellspacing="0">
+		<tr>
+			<td class="TableCellSpaceHolder1PxTall">
+			</td>
+		</tr>
+		<tr>
+			<td class="TableFooter">
+			</td>
+		</tr>
+	</table>
+	<div style="height: 20px">
+	</div>
+	<table border="0" cellpadding="0" width="100%" cellspacing="0">
+		<tr>
+			<td class="FooterLine">
+			</td>
+		</tr>
+	</table>
+	<div class="HeaderText">
+		Full OntoRights	</div>
+</body>
+</html>

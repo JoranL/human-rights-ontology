@@ -1,0 +1,609 @@
+<html>
+<head>
+	<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="report.css" type="text/css"/>
+	<title>Class Diagram - 10. Annex with Data Types and Enumerations</title>
+	<script type="text/javascript" src="report.js"></script>
+	<script type="text/javascript" src="link_popup.js"></script>
+	<script type="text/javascript" src="tooltip.js"></script>
+</head>
+<body style="margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;" onload="initPage();initDiagram();initGridDiagram();">
+	<div style="position:absolute; z-index:2; visibility:hidden;border-top: 2px #FF0000 solid;" id="spotlight_top">
+	</div>
+	<div style="position:absolute; z-index:2; visibility:hidden;border-top: 2px #FF0000 solid;" id="spotlight_bottom">
+	</div>
+	<div style="position:absolute; z-index:2; visibility:hidden;border-left: 2px #FF0000 solid;" id="spotlight_left">
+	</div>
+	<div style="position:absolute; z-index:2; visibility:hidden;border-left: 2px #FF0000 solid;" id="spotlight_right">
+	</div>
+	<canvas width="100" style="position:absolute; z-index:2; visibility:hidden" id="spotlight_c" height="100">
+	</canvas>
+	<div style="position:absolute; width:100px; height:100px; z-index:1; visibility:hidden" id="spotLightResourcesTop">
+		<table border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+<a href="#top"><img style="border:none" src="../images/icons/BackToTop.gif" alt="Back to top"/></a>				</td>
+				<td>
+<a href="javascript:clearSpotLightFromOpenSpecButton();"><img style="border:none" src="../images/icons/OpenSpecification.gif" alt="Open specification"/></a>				</td>
+			</tr>
+		</table>
+	</div>
+	<div style="position:absolute; width:100px; height:100px; z-index:1; visibility:hidden" id="spotLightResourcesRight">
+		<table border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+<a href="#top"><img style="border:none" src="../images/icons/BackToTop.gif" alt="Back to top"/></a>				</td>
+			</tr>
+			<tr>
+				<td>
+<a href="javascript:clearSpotLightFromOpenSpecButton();"><img style="border:none" src="../images/icons/OpenSpecification.gif" alt="Open specification"/></a>				</td>
+			</tr>
+		</table>
+	</div>
+	<div style="position:absolute;z-index:4;visibility:hidden" id="linkPopupMenuLayer">
+		<table border="0" width="100%" style="border-style:solid; border-width:1px; border-color:#000000; background:#FFFFFF; width:250px" id="linkPopupMenuTable">
+		</table>
+	</div>
+	<div style="position:absolute; z-index:1; visibility:hidden; " id="referenceIconLayer">
+		<table border="0" cellpadding="3" cellspacing="0" style="font-size:1;">
+			<tr>
+				<td>
+					<img src="../images/icons/Ref.gif" style="border:none" onclick="movePopupPositionToReferenceIconPosition();resetPopupForReference();switchPopupShowHideStatus();" />				</td>
+			</tr>
+		</table>
+	</div>
+	<div style="position:absolute; z-index:1; visibility:hidden; " id="subdiagramIconLayer">
+		<table border="0" cellpadding="3" cellspacing="0" style="font-size:1;">
+			<tr>
+				<td>
+					<img src="../images/icons/Subdiagram.gif" style="border:none" onclick="movePopupPositionToSubdiagramIconPosition();resetPopupForSubdiagram();switchPopupShowHideStatus();" />				</td>
+			</tr>
+		</table>
+	</div>
+	<div style="position:absolute; z-index:1; visibility:hidden; " id="transitorIconLayer">
+		<table border="0" cellpadding="3" cellspacing="0" style="font-size:1;">
+			<tr>
+				<td>
+					<img src="../images/icons/Transitor.gif" style="border:none" onclick="movePopupPositionToTransitorIconPosition();resetPopupForTransitor();switchPopupShowHideStatus();" />				</td>
+			</tr>
+		</table>
+	</div>
+	<div style="position:absolute; z-index:1; visibility:hidden; " id="documentationIconLayer">
+		<table border="0" cellpadding="3" cellspacing="0" style="font-size:1;">
+			<tr>
+				<td>
+					<img src="../images/icons/Documentation.png" style="border:none" />				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="HeaderText">
+		Easy OntoRights	</div>
+	<table border="0" cellpadding="0" width="100%" cellspacing="0">
+		<tr>
+			<td class="HeaderLine1">
+			</td>
+		</tr>
+		<tr>
+			<td class="HeaderLine2">
+			</td>
+		</tr>
+		<tr>
+			<td class="HeaderLine3">
+			</td>
+		</tr>
+	</table>
+	<div style="position:absolute; z-index:21; visibility:hidden" id="referencedBys">
+		<table border="0" width="100%" style="border-style:solid; border-width:1px; border-color:#000000; background:#FFFFFF; width:250px" id="referencedBysTable">
+		</table>
+	</div>
+	<div style="position:absolute; z-index:21; visibility:hidden" id="vplink">
+		<table border="1" cellpadding="0" cellspacing="0" bordercolor="#A9BFD3">
+			<tr>
+				<td>
+					<table border="0" cellpadding="0" width="100%" cellspacing="0">
+						<tr style="background:#DDDDDD">
+							<td style="font-size: 12px;" align="left">
+								<select onchange="vpLinkToggleName()" id="vplink-linkType">
+	<option value="Project Link">Project Link</option>
+	<option value="Page URL">Page URL</option>
+</select>
+							</td>
+							<td style="font-size: 12px;" align="right">
+								<input onclick="javascript: vpLinkToggleName()" id="vplink-checkbox" type="checkbox" />
+								<label for="vplink-checkbox">with Name</label>							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<textarea id="vplink-text" style="width: 348px; height: 60px; border-color: #7EADD9; outline: none;"></textarea>				</td>
+			</tr>
+		</table>
+	</div>
+	<p class="PageTitle">
+		<span id="PageTitleText">
+			Class Diagram - 10. Annex with Data Types and Enumerations		</span>
+<a onclick="javascript: showVpLink('Easy_OntoRights_v1_1.vpp://diagram/NHrieQGD.AACARnh', '10. Annex with Data Types and Enumerations\nEasy_OntoRights_v1_1.vpp://diagram/NHrieQGD.AACARnh', '10. Annex with Data Types and Enumerations', this); return false;" style="padding-left: 16px; font-size: 12px" href="#"><img src="../images/icons/link.png" border="0"> link</a>	</p>
+	<div style="position: relative; padding-bottom: 20px;">
+		<table border="0" cellpadding="0" width="100%" cellspacing="0" style="position: absolute; top: 0; left: 0; z-index: 20;" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon(),hideLinkPopup(),hideReferencedBys();">
+			<tr>
+				<td>
+<span class="TableContent">Jump to:</span>					<select id="SelectShape" class="TableContent" onChange="scrollWin('diagram', this.value);hideLinkPopup();showSpotLight('diagram', this.value)">
+<option value="">Please select a model element</option>
+<option value="shape|689.0|685.0|201.0|142.0|Class_AVZNeQGD_AACARVL.html|Class_AVZNeQGD_AACARVL.html|flZNeQGD.AACARVJ" id="optionflZNeQGD.AACARVJ">DEF-MonitoringIntentionList : Class</option>
+<option value="shape|379.0|162.0|97.0|64.0|Class_OB5T4gGD_AACAUFr.html|Class_OB5T4gGD_AACAUFr.html|OyyaeQGD.AACAR7D" id="optionOyyaeQGD.AACAR7D">DEF-Time : Class</option>
+<option value="shape|379.0|55.0|97.0|78.0|Class_XTHj4gGD_AACAUEj.html|Class_XTHj4gGD_AACAUEj.html|aPkaeQGD.AACAR6W" id="optionaPkaeQGD.AACAR6W">DEF-Date : Class</option>
+<option value="shape|324.0|454.0|212.0|134.0|Class_XiB21gGD_AACASn5.html|Class_XiB21gGD_AACASn5.html|UwsqeQGD.AACAR2l" id="optionUwsqeQGD.AACAR2l">DEF-MonitoringParticipationList : Class</option>
+<option value="shape|324.0|313.0|270.0|123.0|Class_3PJ81gGD_AACASPC.html|Class_3PJ81gGD_AACASPC.html|IwsqeQGD.AACAR2i" id="optionIwsqeQGD.AACAR2i">DEF-ConfidentialityManagement : Class</option>
+<option value="shape|685.0|333.0|218.0|61.0|Class_geE81gGD_AACASN2.html|Class_geE81gGD_AACASN2.html|vQsqeQGD.AACAR2f" id="optionvQsqeQGD.AACAR2f">DEF-ConfidentialityConditionList : Class</option>
+<option value="shape|689.0|423.0|214.0|131.0|Class_Etfs1gGD_AACASM1.html|Class_Etfs1gGD_AACASM1.html|bQsqeQGD.AACAR2c" id="optionbQsqeQGD.AACAR2c">DEF-ConfidentialityLevelList : Class</option>
+<option value="shape|689.0|571.0|149.0|91.0|Class_oyL01gGD_AACASJH.html|Class_oyL01gGD_AACASJH.html|9QsqeQGD.AACAR2Z" id="option9QsqeQGD.AACAR2Z">DEF-LocationTypeList : Class</option>
+<option value="shape|324.0|606.0|165.0|138.0|Class_EOc01gGD_AACASIo.html|Class_EOc01gGD_AACASIo.html|5QsqeQGD.AACAR2W" id="option5QsqeQGD.AACAR2W">DEF-ChannelList : Class</option>
+<option value="shape|965.0|69.0|295.0|129.0|Class_Yjh8VgGD_AACARvj.html|Class_Yjh8VgGD_AACARvj.html|X2AqeQGD.AACAR0n" id="optionX2AqeQGD.AACAR0n">DEF-HumanRightsStandardTypeList : Class</option>
+<option value="shape|965.0|226.0|166.0|99.0|Class_qGccVgGD_AACARth.html|Class_qGccVgGD_AACARth.html|z2AqeQGD.AACAR0k" id="optionz2AqeQGD.AACAR0k">DEF-InstrumentTypeList : Class</option>
+<option value="shape|154.0|313.0|118.0|55.0|Class_YAr_mQGD_AACASmt.html|Class_YAr_mQGD_AACASmt.html|kr.KeQGD.AACARxf" id="optionkr.KeQGD.AACARxf">DEF-PersonRelationshipsTypeList : Class</option>
+<option value="shape|154.0|571.0|118.0|52.0|Class_oGezpgGD_AACASA2.html|Class_oGezpgGD_AACASA2.html|PL.KeQGD.AACARxZ" id="optionPL.KeQGD.AACARxZ">DEF-SexualOrientationList : Class</option>
+<option value="shape|154.0|451.0|118.0|92.0|Class_oT_TpgGD_AACAR_t.html|Class_oT_TpgGD_AACAR_t.html|rL.KeQGD.AACARxW" id="optionrL.KeQGD.AACARxW">DEF-SexList : Class</option>
+<option value="shape|2.0|55.0|152.0|92.0|Class_Hi7DpgGD_AACAR6x.html|Class_Hi7DpgGD_AACAR6x.html|dL.KeQGD.AACARxT" id="optiondL.KeQGD.AACARxT">DEF-Timepoint : Class</option>
+<option value="shape|206.0|55.0|97.0|64.0|Class_gcDT4gGD_AACAUGN.html|Class_gcDT4gGD_AACAUGN.html|FL.KeQGD.AACARxQ" id="optionFL.KeQGD.AACARxQ">DEF-DateTime : Class</option>
+<option value="shape|2.0|497.0|118.0|40.0|Class_YWX9pgGD_AACAR5z.html|Class_YWX9pgGD_AACAR5z.html|hL.KeQGD.AACARxN" id="optionhL.KeQGD.AACARxN">DEF-CountryList : Class</option>
+<option value="shape|2.0|558.0|118.0|40.0|Class_yz_dpgGD_AACAR43.html|Class_yz_dpgGD_AACAR43.html|8L.KeQGD.AACARxK" id="option8L.KeQGD.AACARxK">DEF-EthnicGroupList : Class</option>
+<option value="shape|2.0|436.0|118.0|40.0|Class_tqedpgGD_AACAR4S.html|Class_tqedpgGD_AACAR4S.html|kL.KeQGD.AACARxH" id="optionkL.KeQGD.AACARxH">DEF-CivilStatusList : Class</option>
+<option value="shape|154.0|389.0|118.0|40.0|Class_7_5tpgGD_AACAR3o.html|Class_7_5tpgGD_AACAR3o.html|_z.KeQGD.AACARxE" id="option_z.KeQGD.AACARxE">DEF-ReligionList : Class</option>
+<option value="shape|2.0|313.0|132.0|101.0|Class_msi5pgGD_AACARsV.html|Class_msi5pgGD_AACARsV.html|7z.KeQGD.AACARxB" id="option7z.KeQGD.AACARxB">DEF-ContactDetails : Class</option>
+<option value="shape|965.0|454.0|132.0|109.0|Class_TtRgkgGD_AACAU2V.html|Class_TtRgkgGD_AACAU2V.html|R6vyeQGD.AACARvd" id="optionR6vyeQGD.AACARvd">DEF-AgentType : Class</option>
+<option value="shape|558.0|69.0|131.0|123.0|Class_Q5unEgGD_AACAUro.html|Class_Q5unEgGD_AACAUro.html|66vyeQGD.AACARva" id="option66vyeQGD.AACARva">DEF-RoleTypeList : Class</option>
+<option value="shape|1284.0|69.0|156.0|40.0|Class_ZZUgqgGD_AACARKw.html|Class_ZZUgqgGD_AACARKw.html|pUOyeQGD.AACARsx" id="optionpUOyeQGD.AACARsx">DEF-OHCHRThematicIssue : Class</option>
+<option value="shape|1156.0|229.0|198.0|92.0|Class_usNAaQGD_AACARnr.html|Class_usNAaQGD_AACARnr.html|8kkSeQGD.AACARpu" id="option8kkSeQGD.AACARpu">DEF-ConfirmedStatusList : Class</option>
+</select>				</td>
+			</tr>
+		</table>
+		<table border="0" cellpadding="0" width="100%" cellspacing="0" style="position: relative; top: 24;">
+			<tr>
+				<td>
+					<img id="diagram" src="../images/10_Annex_with_Data_Types_and_Enumerations.png" usemap="#diagram_map" class="Image" width="1541" height="831"/>
+					<map name="diagram_map">
+<area imageId="diagram" coords="303.0, 86.0, 303.0, 100.0, 379.0, 100.0, 379.0, 86.0" coords2="303.0, 86.0, 303.0, 100.0, 379.0, 100.0, 379.0, 86.0" shape="poly" alt=":Association" id="areadiagram_map_ePkaeQGD.AACAR6Y_default" href="Association_XepL4gGD_AACAUO1.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="347.0, 94.0, 347.0, 97.0, 303.0, 97.0, 303.0, 111.0, 347.0, 111.0, 347.0, 168.0, 344.0, 168.0, 344.0, 182.0, 347.0, 182.0, 347.0, 185.0, 361.0, 185.0, 361.0, 182.0, 379.0, 182.0, 379.0, 168.0, 361.0, 168.0, 361.0, 111.0, 364.0, 111.0, 364.0, 97.0, 361.0, 97.0, 361.0, 94.0" coords2="347.0, 94.0, 347.0, 97.0, 303.0, 97.0, 303.0, 111.0, 347.0, 111.0, 347.0, 168.0, 344.0, 168.0, 344.0, 182.0, 347.0, 182.0, 347.0, 185.0, 361.0, 185.0, 361.0, 182.0, 379.0, 182.0, 379.0, 168.0, 361.0, 168.0, 361.0, 111.0, 364.0, 111.0, 364.0, 97.0, 361.0, 97.0, 361.0, 94.0" shape="poly" alt=":Association" id="areadiagram_map_pyyaeQGD.AACAR7F_default" href="Association_lS5L4gGD_AACAUPB.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="154.0, 61.0, 154.0, 75.0, 206.0, 75.0, 206.0, 61.0" coords2="154.0, 61.0, 154.0, 75.0, 206.0, 75.0, 206.0, 61.0" shape="poly" alt=":Association" id="areadiagram_map_xmuaeQGD.AACAR7z_default" href="Association_omuaeQGD_AACAR7u.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="594.0, 347.0, 594.0, 361.0, 685.0, 361.0, 685.0, 347.0" coords2="594.0, 347.0, 594.0, 361.0, 685.0, 361.0, 685.0, 347.0" shape="poly" alt=":Association" id="areadiagram_map_bwgleQGD.AACARQs_default" href="Association_5wgleQGD_AACARQn.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="642.0, 354.0, 642.0, 357.0, 594.0, 357.0, 594.0, 371.0, 642.0, 371.0, 642.0, 429.0, 639.0, 429.0, 639.0, 443.0, 642.0, 443.0, 642.0, 446.0, 656.0, 446.0, 656.0, 443.0, 689.0, 443.0, 689.0, 429.0, 656.0, 429.0, 656.0, 371.0, 659.0, 371.0, 659.0, 357.0, 656.0, 357.0, 656.0, 354.0" coords2="642.0, 354.0, 642.0, 357.0, 594.0, 357.0, 594.0, 371.0, 642.0, 371.0, 642.0, 429.0, 639.0, 429.0, 639.0, 443.0, 642.0, 443.0, 642.0, 446.0, 656.0, 446.0, 656.0, 443.0, 689.0, 443.0, 689.0, 429.0, 656.0, 429.0, 656.0, 371.0, 659.0, 371.0, 659.0, 357.0, 656.0, 357.0, 656.0, 354.0" shape="poly" alt=":Association" id="areadiagram_map_1QQleQGD.AACARQ0_default" href="Association_eQQleQGD_AACARQv.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="689, 685, 890, 827" coords2="689, 685, 890, 827" shape="rect" alt="DEF-MonitoringIntentionList:Class" id="areadiagram_map_flZNeQGD.AACARVJ_default" href="Class_AVZNeQGD_AACARVL.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="379, 162, 476, 226" coords2="379, 162, 476, 226" shape="rect" alt="DEF-Time:Class" id="areadiagram_map_OyyaeQGD.AACAR7D_default" href="Class_OB5T4gGD_AACAUFr.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="379, 55, 476, 133" coords2="379, 55, 476, 133" shape="rect" alt="DEF-Date:Class" id="areadiagram_map_aPkaeQGD.AACAR6W_default" href="Class_XTHj4gGD_AACAUEj.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="324, 454, 536, 588" coords2="324, 454, 536, 588" shape="rect" alt="DEF-MonitoringParticipationList:Class" id="areadiagram_map_UwsqeQGD.AACAR2l_default" href="Class_XiB21gGD_AACASn5.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="324, 313, 594, 436" coords2="324, 313, 594, 436" shape="rect" alt="DEF-ConfidentialityManagement:Class" id="areadiagram_map_IwsqeQGD.AACAR2i_default" href="Class_3PJ81gGD_AACASPC.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="685, 333, 903, 394" coords2="685, 333, 903, 394" shape="rect" alt="DEF-ConfidentialityConditionList:Class" id="areadiagram_map_vQsqeQGD.AACAR2f_default" href="Class_geE81gGD_AACASN2.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="689, 423, 903, 554" coords2="689, 423, 903, 554" shape="rect" alt="DEF-ConfidentialityLevelList:Class" id="areadiagram_map_bQsqeQGD.AACAR2c_default" href="Class_Etfs1gGD_AACASM1.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="689, 571, 838, 662" coords2="689, 571, 838, 662" shape="rect" alt="DEF-LocationTypeList:Class" id="areadiagram_map_9QsqeQGD.AACAR2Z_default" href="Class_oyL01gGD_AACASJH.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="324, 606, 489, 744" coords2="324, 606, 489, 744" shape="rect" alt="DEF-ChannelList:Class" id="areadiagram_map_5QsqeQGD.AACAR2W_default" href="Class_EOc01gGD_AACASIo.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="965, 69, 1260, 198" coords2="965, 69, 1260, 198" shape="rect" alt="DEF-HumanRightsStandardTypeList:Class" id="areadiagram_map_X2AqeQGD.AACAR0n_default" href="Class_Yjh8VgGD_AACARvj.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="965, 226, 1131, 325" coords2="965, 226, 1131, 325" shape="rect" alt="DEF-InstrumentTypeList:Class" id="areadiagram_map_z2AqeQGD.AACAR0k_default" href="Class_qGccVgGD_AACARth.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="154, 313, 272, 368" coords2="154, 313, 272, 368" shape="rect" alt="DEF-PersonRelationshipsTypeList:Class" id="areadiagram_map_kr.KeQGD.AACARxf_default" href="Class_YAr_mQGD_AACASmt.html" onmouseover="storeReferenceAndSubdiagramInfos('diagram','154, 313, 272, 368',new Array(),new Array(),new Array(new Array('https://docs.google.com/spreadsheets/d/1BbjRq0aetj-0mMNlMX-R-t6Z26Y1PZKhsAv9SbKNvio','HURIDOCS Microthesauri: 21-Types of Relationships')),new Array(),new Array(),new Array(),new Array(),new Array(),new Array()),showReferenceIcon('diagram', '154, 313, 272, 368'),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="154, 571, 272, 623" coords2="154, 571, 272, 623" shape="rect" alt="DEF-SexualOrientationList:Class" id="areadiagram_map_PL.KeQGD.AACARxZ_default" href="Class_oGezpgGD_AACASA2.html" onmouseover="storeReferenceAndSubdiagramInfos('diagram','154, 571, 272, 623',new Array(),new Array(),new Array(new Array('https://docs.google.com/spreadsheets/d/1BAEzGDIm9mTMthJB2kA9zEamgOzAJ4nbNpih9XTpBCg','HURIDOCS Microthesauri: 67-Sexual Orientation')),new Array(),new Array(),new Array(),new Array(),new Array(),new Array()),showReferenceIcon('diagram', '154, 571, 272, 623'),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="154, 451, 272, 543" coords2="154, 451, 272, 543" shape="rect" alt="DEF-SexList:Class" id="areadiagram_map_rL.KeQGD.AACARxW_default" href="Class_oT_TpgGD_AACAR_t.html" onmouseover="storeReferenceAndSubdiagramInfos('diagram','154, 451, 272, 543',new Array(),new Array(),new Array(new Array('https://docs.google.com/spreadsheets/d/10VQ3it0Q_mWcGrzoN8GC5T1t4rrmOt0V3731iEETD-A/','HURIDOCS Microthesauri: 15-Geographical Terms')),new Array(),new Array(),new Array(),new Array(),new Array(),new Array()),showReferenceIcon('diagram', '154, 451, 272, 543'),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="2, 55, 154, 147" coords2="2, 55, 154, 147" shape="rect" alt="DEF-Timepoint:Class" id="areadiagram_map_dL.KeQGD.AACARxT_default" href="Class_Hi7DpgGD_AACAR6x.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="206, 55, 303, 119" coords2="206, 55, 303, 119" shape="rect" alt="DEF-DateTime:Class" id="areadiagram_map_FL.KeQGD.AACARxQ_default" href="Class_gcDT4gGD_AACAUGN.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="2, 497, 120, 537" coords2="2, 497, 120, 537" shape="rect" alt="DEF-CountryList:Class" id="areadiagram_map_hL.KeQGD.AACARxN_default" href="Class_YWX9pgGD_AACAR5z.html" onmouseover="storeReferenceAndSubdiagramInfos('diagram','2, 497, 120, 537',new Array(),new Array(),new Array(new Array('https://docs.google.com/spreadsheets/d/10VQ3it0Q_mWcGrzoN8GC5T1t4rrmOt0V3731iEETD-A/','HURIDOCS Microthesauri: 15-Geographical Terms')),new Array(),new Array(),new Array(),new Array(),new Array(),new Array()),showReferenceIcon('diagram', '2, 497, 120, 537'),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="2, 558, 120, 598" coords2="2, 558, 120, 598" shape="rect" alt="DEF-EthnicGroupList:Class" id="areadiagram_map_8L.KeQGD.AACARxK_default" href="Class_yz_dpgGD_AACAR43.html" onmouseover="storeReferenceAndSubdiagramInfos('diagram','2, 558, 120, 598',new Array(),new Array(),new Array(new Array('https://docs.google.com/spreadsheets/d/1kiu9yOj1QtakDjHttOENjd1v0kWxbnWJvtWzIKz1NM0/','HURIDOCS Microthesauri: 13-Ethnic Groups')),new Array(),new Array(),new Array(),new Array(),new Array(),new Array()),showReferenceIcon('diagram', '2, 558, 120, 598'),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="2, 436, 120, 476" coords2="2, 436, 120, 476" shape="rect" alt="DEF-CivilStatusList:Class" id="areadiagram_map_kL.KeQGD.AACARxH_default" href="Class_tqedpgGD_AACAR4S.html" onmouseover="storeReferenceAndSubdiagramInfos('diagram','2, 436, 120, 476',new Array(),new Array(),new Array(new Array('https://docs.google.com/spreadsheets/d/1-yhacjhfxD1Pjdpr6ahVuHSP94fPIXBmLHYGJ7zsJJM/edit?usp=sharing','HURIDOCS Microthesauri: 8-Civil Status')),new Array(),new Array(),new Array(),new Array(),new Array(),new Array()),showReferenceIcon('diagram', '2, 436, 120, 476'),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="154, 389, 272, 429" coords2="154, 389, 272, 429" shape="rect" alt="DEF-ReligionList:Class" id="areadiagram_map__z.KeQGD.AACARxE_default" href="Class_7_5tpgGD_AACAR3o.html" onmouseover="storeReferenceAndSubdiagramInfos('diagram','154, 389, 272, 429',new Array(),new Array(),new Array(new Array('https://docs.google.com/spreadsheets/d/1LmttMd2w6M0m6b94Hlyt9rTOSjJU_bnbC0d8YM5njSE/edit?usp=sharing','HURIDOCS Microthesauri: 12-Religions')),new Array(),new Array(),new Array(),new Array(),new Array(),new Array()),showReferenceIcon('diagram', '154, 389, 272, 429'),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="2, 313, 134, 414" coords2="2, 313, 134, 414" shape="rect" alt="DEF-ContactDetails:Class" id="areadiagram_map_7z.KeQGD.AACARxB_default" href="Class_msi5pgGD_AACARsV.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="965, 454, 1097, 563" coords2="965, 454, 1097, 563" shape="rect" alt="DEF-AgentType:Class" id="areadiagram_map_R6vyeQGD.AACARvd_default" href="Class_TtRgkgGD_AACAU2V.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="558, 69, 689, 192" coords2="558, 69, 689, 192" shape="rect" alt="DEF-RoleTypeList:Class" id="areadiagram_map_66vyeQGD.AACARva_default" href="Class_Q5unEgGD_AACAUro.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="1284, 69, 1440, 109" coords2="1284, 69, 1440, 109" shape="rect" alt="DEF-OHCHRThematicIssue:Class" id="areadiagram_map_pUOyeQGD.AACARsx_default" href="Class_ZZUgqgGD_AACARKw.html" onmouseover="storeReferenceAndSubdiagramInfos('diagram','1284, 69, 1440, 109',new Array(),new Array(),new Array(new Array('https://docs.google.com/spreadsheets/d/1Ofzny1qRghG_ThBA8oKlAjC_vkNQrEYSrUjz1sglvV0/edit?usp=sharing','Reference data of OHCHR Thematic Issues')),new Array(),new Array(),new Array(),new Array(),new Array(),new Array()),showReferenceIcon('diagram', '1284, 69, 1440, 109'),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+<area imageId="diagram" coords="1156, 229, 1354, 321" coords2="1156, 229, 1354, 321" shape="rect" alt="DEF-ConfirmedStatusList:Class" id="areadiagram_map_8kkSeQGD.AACARpu_default" href="Class_usNAaQGD_AACARnr.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()" onmousedown="clearSpotLight();"/>
+</map>
+				</td>
+			</tr>
+		</table>
+		<p>
+		</p>
+	</div>
+	<table border="0" cellpadding="0" width="100%" cellspacing="0">
+		<tr>
+			<td class="Category">
+				Model Elements			</td>
+		</tr>
+		<tr>
+			<td style="height: 5px">
+			</td>
+		</tr>
+	</table>
+	<table border="0" cellpadding="0" width="100%" cellspacing="0">
+		<tr>
+			<td colSpan="4" class="TableHeaderLine">
+			</td>
+		</tr>
+		<tr>
+			<td colSpan="4" class="TableHeaderLine1">
+			</td>
+		</tr>
+		<tr class="TableHeader">
+			<td class="TableCellSpaceHolder10Px">
+			</td>
+			<td width="30%">
+<span class="TableHeaderText">Name</span>			</td>
+			<td class="TableCellSpaceHolder20Px">
+			</td>
+			<td>
+<span class="TableHeaderText">Description</span>			</td>
+		</tr>
+		<tr>
+			<td colSpan="4" class="TableHeaderLine2">
+			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_AVZNeQGD_AACARVL.html" class="ItemLink">DEF-MonitoringIntentionList : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_OB5T4gGD_AACAUFr.html" class="ItemLink">DEF-Time : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_XTHj4gGD_AACAUEj.html" class="ItemLink">DEF-Date : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_XiB21gGD_AACASn5.html" class="ItemLink">DEF-MonitoringParticipationList : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_3PJ81gGD_AACASPC.html" class="ItemLink">DEF-ConfidentialityManagement : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_geE81gGD_AACASN2.html" class="ItemLink">DEF-ConfidentialityConditionList : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_Etfs1gGD_AACASM1.html" class="ItemLink">DEF-ConfidentialityLevelList : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_oyL01gGD_AACASJH.html" class="ItemLink">DEF-LocationTypeList : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_EOc01gGD_AACASIo.html" class="ItemLink">DEF-ChannelList : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_Yjh8VgGD_AACARvj.html" class="ItemLink">DEF-HumanRightsStandardTypeList : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_qGccVgGD_AACARth.html" class="ItemLink">DEF-InstrumentTypeList : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_YAr_mQGD_AACASmt.html" class="ItemLink">DEF-PersonRelationshipsTypeList : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_oGezpgGD_AACASA2.html" class="ItemLink">DEF-SexualOrientationList : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_oT_TpgGD_AACAR_t.html" class="ItemLink">DEF-SexList : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_Hi7DpgGD_AACAR6x.html" class="ItemLink">DEF-Timepoint : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_gcDT4gGD_AACAUGN.html" class="ItemLink">DEF-DateTime : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_YWX9pgGD_AACAR5z.html" class="ItemLink">DEF-CountryList : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_yz_dpgGD_AACAR43.html" class="ItemLink">DEF-EthnicGroupList : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_tqedpgGD_AACAR4S.html" class="ItemLink">DEF-CivilStatusList : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_7_5tpgGD_AACAR3o.html" class="ItemLink">DEF-ReligionList : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_msi5pgGD_AACARsV.html" class="ItemLink">DEF-ContactDetails : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_TtRgkgGD_AACAU2V.html" class="ItemLink">DEF-AgentType : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_Q5unEgGD_AACAUro.html" class="ItemLink">DEF-RoleTypeList : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_ZZUgqgGD_AACARKw.html" class="ItemLink">DEF-OHCHRThematicIssue : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png'); background-repeat: no-repeat;">
+					</div>
+					&nbsp; <a href="Class_usNAaQGD_AACARnr.html" class="ItemLink">DEF-ConfirmedStatusList : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+	</table>
+	<table border="0" cellpadding="0" width="100%" cellspacing="0">
+		<tr>
+			<td class="TableCellSpaceHolder1PxTall">
+			</td>
+		</tr>
+		<tr>
+			<td class="TableFooter">
+			</td>
+		</tr>
+	</table>
+	<div style="height: 20px">
+	</div>
+	<table border="0" cellpadding="0" width="100%" cellspacing="0">
+		<tr>
+			<td class="FooterLine">
+			</td>
+		</tr>
+	</table>
+	<div class="HeaderText">
+		Easy OntoRights	</div>
+</body>
+</html>
