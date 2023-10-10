@@ -15,7 +15,7 @@ function loadUrl() {
             var lArgName = lArgs[i].substring(0, lIndex);
             if (lArgName == 'url') {
                 var lUrl = lArgs[i].substring(lIndex+1);
-                parent._content_pane.location.href = lUrl;
+                parent._content_pane2.location.href = lUrl;
             }
         }
     }

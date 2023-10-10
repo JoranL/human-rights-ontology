@@ -939,7 +939,7 @@ function showVpLinkAt(link, linkWithName, pageUrlElementName, aLeft, aTop) {
 		vpLinkProjectLink = link;
 		vpLinkProjectLinkWithName = linkWithName;
 		if (pageUrlElementName != null) {
-			vpLinkPageUrl = document.location.href;
+			vpLinkPageUrl = window.toOnlineUrl ? window.toOnlineUrl(document.location.href) : document.location.href;
 			vpLinkPageUrlWithName = pageUrlElementName+"\n"+vpLinkPageUrl;
 			
 			lLinkType.disabled = false;
