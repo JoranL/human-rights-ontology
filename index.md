@@ -16,6 +16,8 @@ The project was done in collaboration with [HURIDOCS](https://huridocs.org/), an
 
 ## News
 
+2024-08-07. OntoRights 1.1 is presented in an open-access [article in Journal of Human Rights Practice](https://academic.oup.com/jhrp/advance-article/doi/10.1093/jhuman/huae019/7729217). 
+
 2023-09-08. [OntoRights 1.1](ontorights-access.md) is released. It includes some minor adaptions of of Full and Easy OntoRights based on feedback from other researchers. Basic OntoRights is created to bridge the gap between the Easy OntoRights and human rights practitioners that are new to conceptual modelling. Simple OntoRights is renamed to Easy OntoRights.
 
 2023-03-27. Talk about OntoRights as part of a [virtual seminar about shared datamodels](https://youtu.be/p9GOMkiy3c0?feature=shared) organised by HURIDOCS.
